@@ -643,7 +643,7 @@ export default function App() {
               }`}
             >
               <Layers className="w-3.5 h-3.5" />
-              <span>11 Slots Fijos</span>
+              <span>{funds.length} Slots</span>
             </button>
 
             <button
@@ -766,7 +766,7 @@ export default function App() {
                     </span>
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed mt-2">
-                    Compara la aceleración y persistencia de retornos en cada uno de los 15 slots configurados.
+                    Compara la aceleración y persistencia de retornos en cada uno de los fondos configurados.
                   </p>
                 </div>
                 <button
@@ -791,7 +791,7 @@ export default function App() {
                     </span>
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed mt-2">
-                    Analiza la descorrelación estadística entre tus 15 slots y detecta redundancias.
+                    Analiza la descorrelación estadística entre tus fondos y detecta redundancias.
                   </p>
                 </div>
                 <button

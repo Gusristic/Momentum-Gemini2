@@ -95,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({
               <p className="text-xs text-slate-400 flex flex-wrap items-center gap-1.5 mt-0.5 font-medium">
                 <span>Estrategia Cuantitativa GEM</span>
                 <span className="text-slate-600">•</span>
-                <span>11 Slots Fijos (Yahoo)</span>
+                <span>Slots Yahoo Finance</span>
                 <span className="text-slate-600">•</span>
                 <span className="font-mono text-emerald-400">Rotación Mensual</span>
                 <span className="text-slate-600">•</span>

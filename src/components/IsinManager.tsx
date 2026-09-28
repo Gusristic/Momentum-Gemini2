@@ -176,10 +176,10 @@ export const IsinManager: React.FC<IsinManagerProps> = ({
           <div className="flex flex-wrap items-center gap-2">
             <h2 className="text-lg font-bold text-white tracking-tight flex items-center gap-2">
               <Lock className="w-4 h-4 text-amber-400" />
-              <span>11 Slots Fijos del Sistema (Yahoo Finance Oficial)</span>
+              <span>{funds.length} Slots Cuantitativos (Yahoo Finance Oficial)</span>
             </h2>
             <span className="text-xs px-2.5 py-0.5 rounded-full font-mono bg-blue-950/80 text-blue-300 border border-blue-500/30">
-              11 Activos Seleccionados
+              {funds.length} Activos
             </span>
             <span 
               id="isin-manager-online-update-badge"
@@ -192,7 +192,7 @@ export const IsinManager: React.FC<IsinManagerProps> = ({
             </span>
           </div>
           <p className="text-xs text-slate-400 mt-1">
-            Los 11 slots están fijados con sus códigos de cotización oficiales de Yahoo Finance para garantizar rescates limpios, fiabilidad cuantitativa total y ordenación de podio.
+            Los {funds.length} slots están fijados con sus códigos de cotización oficiales de Yahoo Finance para garantizar rescates limpios, fiabilidad cuantitativa total y ordenación de podio.
           </p>
         </div>
 

@@ -32,8 +32,8 @@ export interface FundLookupResult {
   ytd?: number | null;
   ret3yAnnual?: number | null;
   ret5yAnnual?: number | null;
-  periodReturns?: Record<string, number | null>;
-  periodPrices?: Record<string, number | null>;
+  periodReturns?: Record<string, number | null | undefined>;
+  periodPrices?: Record<string, number | null | undefined>;
   
   // Technical Ratios
   volatility1Y?: number;
@@ -106,58 +106,70 @@ export async function lookupFundByIsinOrQuery(query: string): Promise<FundLookup
     // Si falla el backend, intentar llamada cliente a Yahoo Finance
   }
 
-  // 2. Consulta fallback directa cliente a Yahoo Finance
-  try {
-    const directRes = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(cleanQuery)}?interval=1d&range=5y`, {
-      headers: { 'User-Agent': 'Mozilla/5.0' }
-    });
-    if (directRes.ok) {
-      const json = await directRes.json();
-      const parsed = parseYahooFinanceChartJson(cleanQuery, json);
-      return {
-        query: cleanQuery,
-        isin: parsed.isin,
-        ticker: parsed.ticker,
-        name: parsed.nombreOficial,
-        category: parsed.category,
-        categoryLabel: parsed.categoryLabel,
-        isSafeHaven: parsed.isSafeHaven,
-        currency: parsed.currency,
-        currentNAV: parsed.currentPrice,
-        lastUpdated: parsed.lastDateIso,
-        lastDateFormatted: parsed.lastDateFormatted,
-        yahooUrl: `https://finance.yahoo.com/quote/${encodeURIComponent(parsed.ticker)}`,
-        return1M: parsed.rets['1m'] ? Number((parsed.rets['1m'] * 100).toFixed(2)) : 0,
-        return3M: parsed.rets['3m'] ? Number((parsed.rets['3m'] * 100).toFixed(2)) : 0,
-        return6M: parsed.rets['6m'] ? Number((parsed.rets['6m'] * 100).toFixed(2)) : 0,
-        return12M: parsed.score12M ? Number((parsed.score12M * 100).toFixed(2)) : 0,
-        return12Minus1M: parsed.score12_1 ? Number((parsed.score12_1 * 100).toFixed(2)) : 0,
-        return3YAnnualized: parsed.ret3yAnual ? Number((parsed.ret3yAnual * 100).toFixed(2)) : 0,
-        score12M: parsed.score12M,
-        score12_1: parsed.score12_1,
-        scoreEquilibrado: parsed.scoreEquilibrado,
-        scoreProgresivo: parsed.scoreProgresivo,
-        ytd: parsed.ytd,
-        ret3yAnnual: parsed.ret3yAnual,
-        ret5yAnnual: parsed.ret5yAnual,
-        periodReturns: parsed.rets,
-        periodPrices: parsed.precios,
-        volatility1Y: parsed.volatility1Y,
-        sharpeRatio: parsed.sharpeRatio,
-        jensenAlpha: parsed.jensenAlpha,
-        sortinoRatio: parsed.sortinoRatio,
-        beta: parsed.beta,
-        maxDrawdown: parsed.maxDrawdown,
-        source: 'Yahoo Finance Cliente Directo',
-        history: parsed.history,
-        pointsCount: parsed.history.length,
-      };
+  // 2. Consulta fallback con Proxies CORS cliente a Yahoo Finance (para despliegues estáticos como GitHub Pages)
+  const targetYahooUrl = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(cleanQuery)}?interval=1d&range=5y`;
+  const proxyEndpoints = [
+    targetYahooUrl,
+    `https://corsproxy.io/?url=${encodeURIComponent(targetYahooUrl)}`,
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(targetYahooUrl)}`,
+  ];
+
+  for (const proxyUrl of proxyEndpoints) {
+    try {
+      const directRes = await fetch(proxyUrl, {
+        headers: { 'User-Agent': 'Mozilla/5.0' },
+      });
+      if (directRes.ok) {
+        const text = await directRes.text();
+        const json = JSON.parse(text);
+        const parsed = parseYahooFinanceChartJson(cleanQuery, json);
+        if (parsed && parsed.currentPrice > 0) {
+          return {
+            query: cleanQuery,
+            isin: parsed.isin,
+            ticker: parsed.ticker,
+            name: parsed.nombreOficial,
+            category: parsed.category,
+            categoryLabel: parsed.categoryLabel,
+            isSafeHaven: parsed.isSafeHaven,
+            currency: parsed.currency,
+            currentNAV: parsed.currentPrice,
+            lastUpdated: parsed.lastDateIso,
+            lastDateFormatted: parsed.lastDateFormatted,
+            yahooUrl: `https://finance.yahoo.com/quote/${encodeURIComponent(parsed.ticker)}`,
+            return1M: parsed.rets['1m'] ? Number((parsed.rets['1m'] * 100).toFixed(2)) : 0,
+            return3M: parsed.rets['3m'] ? Number((parsed.rets['3m'] * 100).toFixed(2)) : 0,
+            return6M: parsed.rets['6m'] ? Number((parsed.rets['6m'] * 100).toFixed(2)) : 0,
+            return12M: parsed.score12M ? Number((parsed.score12M * 100).toFixed(2)) : 0,
+            return12Minus1M: parsed.score12_1 ? Number((parsed.score12_1 * 100).toFixed(2)) : 0,
+            return3YAnnualized: parsed.ret3yAnual ? Number((parsed.ret3yAnual * 100).toFixed(2)) : 0,
+            score12M: parsed.score12M,
+            score12_1: parsed.score12_1,
+            scoreEquilibrado: parsed.scoreEquilibrado,
+            scoreProgresivo: parsed.scoreProgresivo,
+            ytd: parsed.ytd,
+            ret3yAnnual: parsed.ret3yAnual,
+            ret5yAnnual: parsed.ret5yAnual,
+            periodReturns: parsed.rets,
+            periodPrices: parsed.precios,
+            volatility1Y: parsed.volatility1Y,
+            sharpeRatio: parsed.sharpeRatio,
+            jensenAlpha: parsed.jensenAlpha,
+            sortinoRatio: parsed.sortinoRatio,
+            beta: parsed.beta,
+            maxDrawdown: parsed.maxDrawdown,
+            source: 'Yahoo Finance Cliente Directo',
+            history: parsed.history,
+            pointsCount: parsed.history.length,
+          };
+        }
+      }
+    } catch {
+      // Probar siguiente endpoint o pasar a fallback
     }
-  } catch {
-    // Continuar a fallback de cartera local
   }
 
-  // 3. Buscar en fondos por defecto locales
+  // 3. Buscar en fondos por defecto locales (conservando métricas del motor cuantitativo)
   const initialMatch = INITIAL_FUNDS.find(f => f.isin.toUpperCase() === cleanQuery || (f.ticker && f.ticker.toUpperCase() === cleanQuery));
   if (initialMatch) {
     return {
@@ -170,17 +182,23 @@ export async function lookupFundByIsinOrQuery(query: string): Promise<FundLookup
       isSafeHaven: initialMatch.isSafeHaven,
       currency: initialMatch.currency,
       currentNAV: initialMatch.currentNAV,
-      lastUpdated: initialMatch.lastUpdated || '2026-09-18',
+      lastUpdated: initialMatch.lastUpdated || '2026-09-24',
+      lastDateFormatted: initialMatch.lastDateFormatted || '24/09/26',
       return1M: initialMatch.return1M,
       return3M: initialMatch.return3M,
       return6M: initialMatch.return6M,
       return12M: initialMatch.return12M,
       return12Minus1M: initialMatch.return12Minus1M || initialMatch.return12M,
       return3YAnnualized: initialMatch.return3YAnnualized,
-      score12M: initialMatch.return12M / 100,
-      score12_1: (initialMatch.return12Minus1M || initialMatch.return12M) / 100,
-      scoreEquilibrado: (initialMatch.return12M * 0.5 + initialMatch.return6M * 0.3 + initialMatch.return3M * 0.2) / 100,
-      scoreProgresivo: (initialMatch.return1M * 0.4 + initialMatch.return3M * 0.3 + initialMatch.return6M * 0.2 + initialMatch.return12M * 0.1) / 100,
+      score12M: initialMatch.score12M !== undefined ? initialMatch.score12M : initialMatch.return12M / 100,
+      score12_1: initialMatch.score12_1 !== undefined ? initialMatch.score12_1 : (initialMatch.return12Minus1M || initialMatch.return12M) / 100,
+      scoreEquilibrado: initialMatch.scoreEquilibrado !== undefined ? initialMatch.scoreEquilibrado : (initialMatch.return12M * 0.5 + initialMatch.return6M * 0.3 + initialMatch.return3M * 0.2) / 100,
+      scoreProgresivo: initialMatch.scoreProgresivo !== undefined ? initialMatch.scoreProgresivo : (initialMatch.return1M * 0.4 + initialMatch.return3M * 0.3 + initialMatch.return6M * 0.2 + initialMatch.return12M * 0.1) / 100,
+      ytd: initialMatch.ytd,
+      ret3yAnnual: initialMatch.ret3yAnnual,
+      ret5yAnnual: initialMatch.ret5yAnnual,
+      periodReturns: initialMatch.periodReturns,
+      periodPrices: initialMatch.periodPrices,
       volatility1Y: initialMatch.volatility1Y,
       sharpeRatio: initialMatch.sharpeRatio,
       jensenAlpha: initialMatch.jensenAlpha,
@@ -188,7 +206,7 @@ export async function lookupFundByIsinOrQuery(query: string): Promise<FundLookup
       beta: initialMatch.beta,
       maxDrawdown: initialMatch.maxDrawdown,
       yahooUrl: `https://finance.yahoo.com/quote/${encodeURIComponent(initialMatch.ticker || initialMatch.isin)}`,
-      source: 'Cartera Inicial Dual Momentum',
+      source: 'Cartera Oficial Dual Momentum',
       history: initialMatch.history || [],
       pointsCount: initialMatch.history?.length || 60,
     };
@@ -328,15 +346,15 @@ export async function syncAllFundsWithYahooFinance(
         return3M: data.return3M ?? f.return3M,
         return1M: data.return1M ?? f.return1M,
         return3YAnnualized: data.return3YAnnualized ?? f.return3YAnnualized,
-        score12M: data.score12M,
-        score12_1: data.score12_1,
-        scoreEquilibrado: data.scoreEquilibrado,
-        scoreProgresivo: data.scoreProgresivo,
-        ytd: data.ytd,
-        ret3yAnnual: data.ret3yAnnual,
-        ret5yAnnual: data.ret5yAnnual,
-        periodReturns: data.periodReturns,
-        periodPrices: data.periodPrices,
+        score12M: data.score12M !== undefined ? data.score12M : f.score12M,
+        score12_1: data.score12_1 !== undefined ? data.score12_1 : f.score12_1,
+        scoreEquilibrado: data.scoreEquilibrado !== undefined ? data.scoreEquilibrado : f.scoreEquilibrado,
+        scoreProgresivo: data.scoreProgresivo !== undefined ? data.scoreProgresivo : f.scoreProgresivo,
+        ytd: data.ytd !== undefined ? data.ytd : f.ytd,
+        ret3yAnnual: data.ret3yAnnual !== undefined ? data.ret3yAnnual : f.ret3yAnnual,
+        ret5yAnnual: data.ret5yAnnual !== undefined ? data.ret5yAnnual : f.ret5yAnnual,
+        periodReturns: data.periodReturns || f.periodReturns,
+        periodPrices: data.periodPrices || f.periodPrices,
         volatility1Y: data.volatility1Y ?? f.volatility1Y,
         sharpeRatio: data.sharpeRatio ?? f.sharpeRatio,
         jensenAlpha: data.jensenAlpha ?? f.jensenAlpha,

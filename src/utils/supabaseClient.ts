@@ -320,10 +320,21 @@ export function getLocalFunds(): FundISIN[] {
           if (!userSlot) return defFund;
           return {
             ...defFund,
+            // User custom portfolio holdings
             sharesHeld: typeof userSlot.sharesHeld === 'number' ? userSlot.sharesHeld : defFund.sharesHeld,
             purchasePriceAvg: typeof userSlot.purchasePriceAvg === 'number' ? userSlot.purchasePriceAvg : defFund.purchasePriceAvg,
             isDisabled: Boolean(userSlot.isDisabled),
             notes: userSlot.notes || defFund.notes,
+            // Retain full Yahoo metric engine data
+            periodReturns: userSlot.periodReturns || defFund.periodReturns,
+            periodPrices: userSlot.periodPrices || defFund.periodPrices,
+            ytd: userSlot.ytd !== undefined ? userSlot.ytd : defFund.ytd,
+            ret3yAnnual: userSlot.ret3yAnnual !== undefined ? userSlot.ret3yAnnual : defFund.ret3yAnnual,
+            ret5yAnnual: userSlot.ret5yAnnual !== undefined ? userSlot.ret5yAnnual : defFund.ret5yAnnual,
+            score12M: userSlot.score12M !== undefined ? userSlot.score12M : defFund.score12M,
+            score12_1: userSlot.score12_1 !== undefined ? userSlot.score12_1 : defFund.score12_1,
+            scoreEquilibrado: userSlot.scoreEquilibrado !== undefined ? userSlot.scoreEquilibrado : defFund.scoreEquilibrado,
+            scoreProgresivo: userSlot.scoreProgresivo !== undefined ? userSlot.scoreProgresivo : defFund.scoreProgresivo,
           };
         });
         localStorage.setItem(STORAGE_KEY_FUNDS, JSON.stringify(merged));

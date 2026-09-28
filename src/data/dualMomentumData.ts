@@ -152,17 +152,17 @@ export const DUAL_MOMENTUM_MODELS_INFO: Record<DualMomentumModelId, DualMomentum
   },
   MULTI_ASSET_USER_DM: {
     id: 'MULTI_ASSET_USER_DM',
-    name: 'Dual Momentum en 10 Slots ISIN del Usuario',
-    tagline: 'Algoritmo de Dual Momentum adaptado a los fondos específicos configurados en tus 10 slots',
+    name: 'Dual Momentum en Cartera de Fondos del Usuario',
+    tagline: 'Algoritmo de Dual Momentum adaptado a los fondos específicos configurados en tus slots',
     author: 'Motor Cuantitativo Adaptativo Dual Momentum España',
     yearCreated: '2026',
     category: 'MULTI_ASSET',
     color: '#ec4899', // Pink
     rulesSummary: [
-      '1. Analiza los fondos de Renta Variable y Mixtos configurados activamente en los slots 1 al 7.',
-      '2. Filtro Absoluto: Todos los candidatos deben superar el retorno 12M del activo refugio asignado (Slot 9 - Monetario / €STR).',
+      '1. Analiza los fondos de Renta Variable y Mixtos configurados activamente en los slots de la cartera.',
+      '2. Filtro Absoluto: Todos los candidatos deben superar el retorno 12M del activo refugio asignado (Fondo Monetario / €STR).',
       '3. Selección Relativa: Asigna el 100% (o 50/50 entre los 2 mejores) con mayor fuerza relativa.',
-      '4. Si ningún fondo bate al monetario, se refugia automáticamente el 100% del capital en el Slot 8/9.'
+      '4. Si ningún fondo bate al monetario, se refugia automáticamente el 100% del capital en el fondo refugio.'
     ],
     pros: [
       '100% personalizable con los fondos reales de tu comercializador (MyInvestor, Renta 4, Openbank, etc.).',
