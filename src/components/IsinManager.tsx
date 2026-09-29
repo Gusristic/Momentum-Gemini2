@@ -70,6 +70,7 @@ export const IsinManager: React.FC<IsinManagerProps> = ({
     const isCurrent = sortKey === key;
     return (
       <th 
+        key={key}
         onClick={() => handleSort(key)}
         className={`py-3 px-3.5 cursor-pointer select-none group hover:text-white transition-colors ${
           align === 'right' ? 'text-right' : align === 'center' ? 'text-center' : 'text-left'
@@ -235,21 +236,9 @@ export const IsinManager: React.FC<IsinManagerProps> = ({
             )}
           </div>
 
-          {onSyncRealMarketData && (
-            <button
-              onClick={onSyncRealMarketData}
-              disabled={isSyncing}
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-blue-500/40 bg-blue-600 hover:bg-blue-500 text-white transition-colors flex items-center gap-1.5 disabled:opacity-50 cursor-pointer shadow"
-              title="Consultar cotizaciones oficiales en Yahoo Finance API"
-            >
-              <RefreshCw className={`w-3 h-3 ${isSyncing ? 'animate-spin' : ''}`} />
-              <span>{isSyncing ? 'Consultando Yahoo...' : 'Actualizar Cotizaciones Yahoo'}</span>
-            </button>
-          )}
-
           <button
             onClick={onResetToDefaults}
-            className="text-xs text-slate-400 hover:text-slate-200 px-2.5 py-1.5 rounded-lg border border-slate-800 hover:bg-slate-800 transition-colors"
+            className="text-xs text-slate-400 hover:text-slate-200 px-2.5 py-1.5 rounded-lg border border-slate-800 hover:bg-slate-800 transition-colors cursor-pointer"
             title="Restablecer los fondos predeterminados oficiales"
           >
             Restaurar {funds.length} Slots

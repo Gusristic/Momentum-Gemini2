@@ -327,49 +327,52 @@ export async function syncAllFundsWithYahooFinance(
     // Fallback individual
   }
 
-  // Fallback: sincronizar secuencialmente uno a uno
-  const updatedFunds = [...funds];
+  // Fallback: sincronizar en paralelo ultra-rápido en cliente (para GitHub Pages y entornos estáticos)
   const errors: string[] = [];
-  for (let i = 0; i < updatedFunds.length; i++) {
-    const f = updatedFunds[i];
-    if (f.isBlank || !f.isin) continue;
-    try {
-      const data = await lookupFundByIsinOrQuery(f.ticker || f.isin);
-      updatedFunds[i] = {
-        ...f,
-        name: data.name || f.name,
-        currentNAV: data.currentNAV || f.currentNAV,
-        lastUpdated: data.lastUpdated || f.lastUpdated,
-        return12M: data.return12M ?? f.return12M,
-        return12Minus1M: data.return12Minus1M ?? f.return12Minus1M,
-        return6M: data.return6M ?? f.return6M,
-        return3M: data.return3M ?? f.return3M,
-        return1M: data.return1M ?? f.return1M,
-        return3YAnnualized: data.return3YAnnualized ?? f.return3YAnnualized,
-        score12M: data.score12M !== undefined ? data.score12M : f.score12M,
-        score12_1: data.score12_1 !== undefined ? data.score12_1 : f.score12_1,
-        scoreEquilibrado: data.scoreEquilibrado !== undefined ? data.scoreEquilibrado : f.scoreEquilibrado,
-        scoreProgresivo: data.scoreProgresivo !== undefined ? data.scoreProgresivo : f.scoreProgresivo,
-        ytd: data.ytd !== undefined ? data.ytd : f.ytd,
-        ret3yAnnual: data.ret3yAnnual !== undefined ? data.ret3yAnnual : f.ret3yAnnual,
-        ret5yAnnual: data.ret5yAnnual !== undefined ? data.ret5yAnnual : f.ret5yAnnual,
-        periodReturns: data.periodReturns || f.periodReturns,
-        periodPrices: data.periodPrices || f.periodPrices,
-        volatility1Y: data.volatility1Y ?? f.volatility1Y,
-        sharpeRatio: data.sharpeRatio ?? f.sharpeRatio,
-        jensenAlpha: data.jensenAlpha ?? f.jensenAlpha,
-        sortinoRatio: data.sortinoRatio ?? f.sortinoRatio,
-        beta: data.beta ?? f.beta,
-        maxDrawdown: data.maxDrawdown ?? f.maxDrawdown,
-        yahooUrl: data.yahooUrl || f.yahooUrl,
-      };
-    } catch (e: any) {
-      errors.push(`${f.isin}: ${e.message}`);
-    }
-  }
+  const updatedFundsResults = await Promise.all(
+    funds.map(async (f) => {
+      if (f.isBlank || !f.isin) return f;
+      try {
+        const data = await lookupFundByIsinOrQuery(f.ticker || f.isin);
+        return {
+          ...f,
+          name: data.name || f.name,
+          currentNAV: data.currentNAV || f.currentNAV,
+          lastUpdated: data.lastUpdated || f.lastUpdated,
+          lastDateFormatted: data.lastDateFormatted || f.lastDateFormatted,
+          return12M: data.return12M ?? f.return12M,
+          return12Minus1M: data.return12Minus1M ?? f.return12Minus1M,
+          return6M: data.return6M ?? f.return6M,
+          return3M: data.return3M ?? f.return3M,
+          return1M: data.return1M ?? f.return1M,
+          return3YAnnualized: data.return3YAnnualized ?? f.return3YAnnualized,
+          score12M: data.score12M !== undefined ? data.score12M : f.score12M,
+          score12_1: data.score12_1 !== undefined ? data.score12_1 : f.score12_1,
+          scoreEquilibrado: data.scoreEquilibrado !== undefined ? data.scoreEquilibrado : f.scoreEquilibrado,
+          scoreProgresivo: data.scoreProgresivo !== undefined ? data.scoreProgresivo : f.scoreProgresivo,
+          ytd: data.ytd !== undefined ? data.ytd : f.ytd,
+          ret3yAnnual: data.ret3yAnnual !== undefined ? data.ret3yAnnual : f.ret3yAnnual,
+          ret5yAnnual: data.ret5yAnnual !== undefined ? data.ret5yAnnual : f.ret5yAnnual,
+          periodReturns: data.periodReturns || f.periodReturns,
+          periodPrices: data.periodPrices || f.periodPrices,
+          volatility1Y: data.volatility1Y ?? f.volatility1Y,
+          sharpeRatio: data.sharpeRatio ?? f.sharpeRatio,
+          jensenAlpha: data.jensenAlpha ?? f.jensenAlpha,
+          sortinoRatio: data.sortinoRatio ?? f.sortinoRatio,
+          beta: data.beta ?? f.beta,
+          maxDrawdown: data.maxDrawdown ?? f.maxDrawdown,
+          yahooUrl: data.yahooUrl || f.yahooUrl,
+          history: data.history && data.history.length > 0 ? data.history : f.history,
+        };
+      } catch (e: any) {
+        errors.push(`${f.isin}: ${e.message}`);
+        return f;
+      }
+    })
+  );
 
   return {
-    updatedFunds,
+    updatedFunds: updatedFundsResults,
     count: activeFunds.length,
     errors
   };

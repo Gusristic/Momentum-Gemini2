@@ -238,16 +238,16 @@ export const Header: React.FC<HeaderProps> = ({
               </button>
             )}
 
-            {/* Botón Actualizar Cotizaciones Online */}
+            {/* Único Botón Principal: Actualizar Cotizaciones Online */}
             <button
               id="refresh-metrics-btn"
               onClick={onRefreshData}
               disabled={isRefreshing}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-950/50 text-emerald-300 hover:bg-emerald-900/40 border border-emerald-500/40 shadow-sm disabled:opacity-50 transition-all cursor-pointer"
-              title="Actualizar cotizaciones, valores liquidativos (VL) y métricas de mercado online"
+              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white shadow-md shadow-emerald-950/50 border border-emerald-400/40 disabled:opacity-50 transition-all active:scale-95 cursor-pointer"
+              title="Actualizar cotizaciones, precios de cierre oficiales y métricas de Yahoo Finance"
             >
-              <RefreshCw className={`w-3.5 h-3.5 text-emerald-400 ${isRefreshing ? 'animate-spin' : ''}`} />
-              <span className="font-bold">{isRefreshing ? 'Actualizando...' : 'Actualizar Cotizaciones'}</span>
+              <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin' : ''}`} />
+              <span>{isRefreshing ? 'Consultando Yahoo...' : 'Actualizar Cotizaciones'}</span>
             </button>
 
             {/* Guide & Rules */}

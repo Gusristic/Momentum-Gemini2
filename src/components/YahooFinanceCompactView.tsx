@@ -243,6 +243,7 @@ export const YahooFinanceCompactView: React.FC<Props> = ({
     const isCur = sortColumn === key;
     return (
       <th 
+        key={key}
         onClick={() => handleSort(key)}
         className={`py-2 px-2 text-center cursor-pointer select-none group hover:brightness-110 transition-all font-bold ${bgClass} ${extraThClass}`}
         title={`Ordenar por ${label}`}
@@ -290,21 +291,12 @@ export const YahooFinanceCompactView: React.FC<Props> = ({
             </button>
 
             <button
-              onClick={() => onSyncAll()}
-              disabled={isSyncing}
-              className="px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 disabled:opacity-50 text-white font-bold text-xs flex items-center gap-2 transition-all shadow-md cursor-pointer"
-            >
-              <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin' : ''}`} />
-              <span>{isSyncing ? 'Consultando Yahoo...' : 'Actualizar Cotizaciones Yahoo'}</span>
-            </button>
-
-            <button
               onClick={exportToCSV}
               className="px-3 py-2 rounded-xl text-xs font-mono font-semibold bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Descargar tabla completa en CSV"
             >
               <Download className="w-3.5 h-3.5 text-emerald-400" />
-              <span>CSV</span>
+              <span>Exportar CSV</span>
             </button>
           </div>
         </div>
@@ -426,7 +418,10 @@ export const YahooFinanceCompactView: React.FC<Props> = ({
                   </td>
 
                   {/* Fecha */}
-                  <td className="py-2.5 px-2 text-center text-slate-400 whitespace-nowrap">
+                  <td 
+                    className="py-2.5 px-2 text-center text-slate-400 whitespace-nowrap"
+                    title={`Fecha de valoración oficial del fondo en Yahoo Finance: ${fund.lastUpdated || dateDisplay}`}
+                  >
                     {dateDisplay}
                   </td>
 
