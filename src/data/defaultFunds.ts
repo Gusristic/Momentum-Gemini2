@@ -1,17 +1,72 @@
 import { FundISIN, HistoricalDataPoint } from '../types';
 
 export const benchReturns = [
-  0.025, 0.018, -0.012, 0.024,
-  -0.038, -0.025, 0.012, -0.054, -0.008, -0.062, 0.051, -0.034, -0.068, 0.042, 0.031, -0.052,
-  0.052, -0.018, 0.024, 0.011, -0.005, 0.041, 0.028, -0.021, -0.034, -0.022, 0.068, 0.045,
-  0.018, 0.034, 0.025, -0.028, 0.039, 0.022, 0.011, 0.018, 0.014, -0.012, 0.042, -0.008,
-  0.019, 0.014, -0.008, 0.017, 0.021, 0.009, -0.014, 0.022, 0.010, 0.008, 0.015, 0.011,
-  0.012, 0.008, 0.014, -0.005, 0.011, 0.007, -0.003, 0.006
+  0.025,
+  0.018,
+  -0.012,
+  0.024,
+  -0.038,
+  -0.025,
+  0.012,
+  -0.054,
+  -0.008,
+  -0.062,
+  0.051,
+  -0.034,
+  -0.068,
+  0.042,
+  0.031,
+  -0.052,
+  0.052,
+  -0.018,
+  0.024,
+  0.011,
+  -0.005,
+  0.041,
+  0.028,
+  -0.021,
+  -0.034,
+  -0.022,
+  0.068,
+  0.045,
+  0.018,
+  0.034,
+  0.025,
+  -0.028,
+  0.039,
+  0.022,
+  0.011,
+  0.018,
+  0.014,
+  -0.012,
+  0.042,
+  -0.008,
+  0.019,
+  0.014,
+  -0.008,
+  0.017,
+  0.021,
+  0.009,
+  -0.014,
+  0.022,
+  0.01,
+  0.008,
+  0.015,
+  0.011,
+  0.012,
+  0.008,
+  0.014,
+  -0.005,
+  0.011,
+  0.007,
+  -0.003,
+  0.006
 ];
 
 /**
  * 12 Slots Fijos Oficiales del Sistema Dual Momentum
  * Datos puros rescatados directamente de Yahoo Finance API (/v8/finance/chart)
+ * Actualizado automáticamente en build / despliegue
  */
 export const INITIAL_FUNDS: FundISIN[] = [
   {
@@ -23,425 +78,425 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "US_EQUITY",
     "categoryLabel": "Renta Variable EE.UU. (S&P 500 / Nasdaq / Sectores)",
     "isSafeHaven": false,
-    "currentNAV": 82.749,
+    "currentNAV": 82.9711,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P00000SUJ.F",
     "sharesHeld": 85.5,
     "purchasePriceAvg": 70.2,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": 3.02,
-    "return3M": 5.13,
-    "return6M": 22.94,
-    "return12M": 20.71,
-    "return12Minus1M": 20.32,
-    "return3YAnnualized": 19.2,
-    "score12M": 0.20709650032602944,
-    "score12_1": 0.20320121037809336,
-    "scoreEquilibrado": 0.18261607310637798,
-    "scoreProgresivo": 0.09405911949758042,
-    "ytd": 0.16113687548673616,
-    "ret3yAnnual": 0.19195128301287823,
-    "ret5yAnnual": 0.1330827047015939,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": 3.11,
+    "return3M": 5.41,
+    "return6M": 23.17,
+    "return12M": 20.95,
+    "return12Minus1M": 19.67,
+    "return3YAnnualized": 19.92,
+    "score12M": 0.20947362283348658,
+    "score12_1": 0.196727918431447,
+    "scoreEquilibrado": 0.1850525499961967,
+    "scoreProgresivo": 0.09594002462297174,
+    "ytd": 0.16425339049048993,
+    "ret3yAnnual": 0.1991554902890258,
+    "ret5yAnnual": 0.13632158594447397,
     "periodReturns": {
-      "1d": 0.00217513994288443,
-      "1w": 0.018678668549346966,
-      "1m": 0.030229989952801795,
-      "3m": 0.0512735491296874,
-      "6m": 0.22937704372475265,
-      "1y": 0.20709650032602944,
-      "2y": 0.3382551529510702,
-      "3y": 0.6934622358473963,
-      "5y": 0.8677040166842718
+      "1d": 0.0026840203506992566,
+      "1w": 0.017584590120104604,
+      "1m": 0.031082429579258886,
+      "3m": 0.054095188729703425,
+      "6m": 0.23165566944504246,
+      "1y": 0.20947362283348658,
+      "2y": 0.34688096567666205,
+      "3y": 0.724354284954237,
+      "5y": 0.8945509263699178
     },
     "periodPrices": {
-      "1d": 82.5694,
-      "1w": 81.2317,
-      "1m": 80.3209,
+      "1d": 82.749,
+      "1w": 81.5373,
+      "1m": 80.4699,
       "3m": 78.7131,
-      "6m": 67.3097,
-      "1y": 68.5521,
-      "2y": 61.8335,
-      "3y": 48.8638,
-      "5y": 44.3052
+      "6m": 67.3655,
+      "1y": 68.601,
+      "2y": 61.6024,
+      "3y": 48.1172,
+      "5y": 43.7946
     },
-    "volatility1Y": 12.66,
-    "sharpeRatio": 1.35,
-    "jensenAlpha": 6.75,
-    "sortinoRatio": 1.98,
+    "volatility1Y": 12.65,
+    "sharpeRatio": 1.37,
+    "jensenAlpha": 6.99,
+    "sortinoRatio": 2,
     "beta": 0.87,
     "maxDrawdown": -22.45,
     "history": [
       {
-        "date": "2021-09-27",
-        "nav": 44.31,
-        "benchmarkNav": 42.09,
+        "date": "2021-09-29",
+        "nav": 43.79,
+        "benchmarkNav": 41.6,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-10-26",
-        "nav": 46.06,
-        "benchmarkNav": 43.76,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2021-11-24",
-        "nav": 49.06,
-        "benchmarkNav": 46.61,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2021-12-23",
-        "nav": 48.87,
-        "benchmarkNav": 46.42,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-01-27",
-        "nav": 45.4,
-        "benchmarkNav": 43.13,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-02-25",
-        "nav": 45.66,
-        "benchmarkNav": 43.38,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-03-28",
-        "nav": 48.89,
-        "benchmarkNav": 46.45,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-04-28",
-        "nav": 47.82,
-        "benchmarkNav": 45.43,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-05-27",
-        "nav": 45.59,
-        "benchmarkNav": 43.31,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-06-27",
-        "nav": 43.25,
-        "benchmarkNav": 41.09,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-07-26",
-        "nav": 45.51,
-        "benchmarkNav": 43.23,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-08-24",
-        "nav": 48.79,
-        "benchmarkNav": 46.35,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-09-23",
-        "nav": 44.84,
-        "benchmarkNav": 42.6,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-10-24",
-        "nav": 45.31,
-        "benchmarkNav": 43.04,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-11-22",
+        "date": "2021-10-28",
         "nav": 45.96,
-        "benchmarkNav": 43.67,
+        "benchmarkNav": 43.66,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-12-21",
-        "nav": 43.19,
-        "benchmarkNav": 41.03,
+        "date": "2021-11-26",
+        "nav": 47.44,
+        "benchmarkNav": 45.07,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-01-24",
-        "nav": 43.69,
-        "benchmarkNav": 41.5,
+        "date": "2021-12-29",
+        "nav": 49.38,
+        "benchmarkNav": 46.91,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-02-22",
-        "nav": 44.46,
-        "benchmarkNav": 42.24,
+        "date": "2022-01-31",
+        "nav": 47.13,
+        "benchmarkNav": 44.78,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-03-23",
-        "nav": 42.99,
-        "benchmarkNav": 40.84,
+        "date": "2022-03-01",
+        "nav": 45.27,
+        "benchmarkNav": 43.01,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-04-25",
-        "nav": 44,
-        "benchmarkNav": 41.8,
+        "date": "2022-03-30",
+        "nav": 48.33,
+        "benchmarkNav": 45.91,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-05-25",
-        "nav": 45.95,
-        "benchmarkNav": 43.65,
+        "date": "2022-05-02",
+        "nav": 46.32,
+        "benchmarkNav": 44,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-06-23",
-        "nav": 47.5,
-        "benchmarkNav": 45.12,
+        "date": "2022-05-31",
+        "nav": 45.3,
+        "benchmarkNav": 43.03,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-07-24",
-        "nav": 48.89,
-        "benchmarkNav": 46.45,
+        "date": "2022-06-29",
+        "nav": 42.84,
+        "benchmarkNav": 40.69,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-08-22",
-        "nav": 48.14,
-        "benchmarkNav": 45.73,
+        "date": "2022-07-28",
+        "nav": 47.16,
+        "benchmarkNav": 44.81,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-09-20",
-        "nav": 48.93,
-        "benchmarkNav": 46.49,
+        "date": "2022-08-26",
+        "nav": 47.69,
+        "benchmarkNav": 45.31,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-10-19",
-        "nav": 48.27,
-        "benchmarkNav": 45.85,
+        "date": "2022-09-27",
+        "nav": 44.68,
+        "benchmarkNav": 42.44,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-11-17",
-        "nav": 49.48,
-        "benchmarkNav": 47.01,
+        "date": "2022-10-26",
+        "nav": 44.96,
+        "benchmarkNav": 42.71,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-12-18",
-        "nav": 51.88,
-        "benchmarkNav": 49.29,
+        "date": "2022-11-24",
+        "nav": 45.68,
+        "benchmarkNav": 43.4,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-01-19",
-        "nav": 53.16,
-        "benchmarkNav": 50.5,
+        "date": "2022-12-23",
+        "nav": 42.82,
+        "benchmarkNav": 40.68,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-02-19",
-        "nav": 55.61,
-        "benchmarkNav": 52.83,
+        "date": "2023-01-26",
+        "nav": 44.25,
+        "benchmarkNav": 42.04,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-03-19",
-        "nav": 57.1,
-        "benchmarkNav": 54.25,
+        "date": "2023-02-24",
+        "nav": 44.6,
+        "benchmarkNav": 42.37,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-04-19",
-        "nav": 55.78,
-        "benchmarkNav": 52.99,
+        "date": "2023-03-27",
+        "nav": 43.74,
+        "benchmarkNav": 41.55,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-05-21",
-        "nav": 58.76,
-        "benchmarkNav": 55.82,
+        "date": "2023-04-27",
+        "nav": 44.55,
+        "benchmarkNav": 42.33,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-06-19",
-        "nav": 61.26,
-        "benchmarkNav": 58.2,
+        "date": "2023-05-29",
+        "nav": 46.64,
+        "benchmarkNav": 44.3,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-07-18",
-        "nav": 60.99,
-        "benchmarkNav": 57.94,
+        "date": "2023-06-27",
+        "nav": 47.53,
+        "benchmarkNav": 45.15,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-08-16",
-        "nav": 60.72,
-        "benchmarkNav": 57.69,
+        "date": "2023-07-26",
+        "nav": 49.09,
+        "benchmarkNav": 46.64,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-09-16",
-        "nav": 60.9,
-        "benchmarkNav": 57.86,
+        "date": "2023-08-24",
+        "nav": 48.06,
+        "benchmarkNav": 45.66,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-10-15",
-        "nav": 64.18,
-        "benchmarkNav": 60.97,
+        "date": "2023-09-22",
+        "nav": 48.3,
+        "benchmarkNav": 45.89,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-11-13",
-        "nav": 68.04,
-        "benchmarkNav": 64.64,
+        "date": "2023-10-23",
+        "nav": 47.31,
+        "benchmarkNav": 44.94,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-12-12",
-        "nav": 69.61,
-        "benchmarkNav": 66.13,
+        "date": "2023-11-21",
+        "nav": 49.54,
+        "benchmarkNav": 47.06,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-01-17",
-        "nav": 70.2,
-        "benchmarkNav": 66.69,
+        "date": "2023-12-20",
+        "nav": 51.16,
+        "benchmarkNav": 48.6,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-02-17",
-        "nav": 70.4,
-        "benchmarkNav": 66.88,
+        "date": "2024-01-23",
+        "nav": 53.68,
+        "benchmarkNav": 51,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-03-18",
-        "nav": 62.06,
-        "benchmarkNav": 58.96,
+        "date": "2024-02-21",
+        "nav": 55.16,
+        "benchmarkNav": 52.4,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-04-16",
-        "nav": 55.96,
-        "benchmarkNav": 53.16,
+        "date": "2024-03-21",
+        "nav": 57.79,
+        "benchmarkNav": 54.9,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-05-20",
-        "nav": 63.76,
-        "benchmarkNav": 60.57,
+        "date": "2024-04-23",
+        "nav": 56.79,
+        "benchmarkNav": 53.95,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-06-18",
-        "nav": 62.9,
-        "benchmarkNav": 59.76,
+        "date": "2024-05-23",
+        "nav": 58.35,
+        "benchmarkNav": 55.43,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-07-17",
-        "nav": 65.81,
-        "benchmarkNav": 62.52,
+        "date": "2024-06-21",
+        "nav": 61.4,
+        "benchmarkNav": 58.33,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-08-15",
-        "nav": 66.72,
-        "benchmarkNav": 63.39,
+        "date": "2024-07-22",
+        "nav": 61.38,
+        "benchmarkNav": 58.31,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-09-15",
-        "nav": 68.23,
-        "benchmarkNav": 64.82,
+        "date": "2024-08-20",
+        "nav": 60.53,
+        "benchmarkNav": 57.51,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-10-14",
-        "nav": 69.53,
-        "benchmarkNav": 66.05,
+        "date": "2024-09-18",
+        "nav": 60.78,
+        "benchmarkNav": 57.74,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-11-12",
-        "nav": 71.71,
-        "benchmarkNav": 68.12,
+        "date": "2024-10-17",
+        "nav": 64.92,
+        "benchmarkNav": 61.67,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-12-11",
-        "nav": 71.3,
-        "benchmarkNav": 67.74,
+        "date": "2024-11-15",
+        "nav": 67.09,
+        "benchmarkNav": 63.74,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-01-16",
-        "nav": 72.76,
-        "benchmarkNav": 69.12,
+        "date": "2024-12-16",
+        "nav": 69.67,
+        "benchmarkNav": 66.18,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-02-16",
+        "date": "2025-01-21",
         "nav": 70.14,
         "benchmarkNav": 66.63,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-03-17",
-        "nav": 70.95,
-        "benchmarkNav": 67.4,
+        "date": "2025-02-19",
+        "nav": 71.13,
+        "benchmarkNav": 67.57,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-04-17",
-        "nav": 73.46,
-        "benchmarkNav": 69.79,
+        "date": "2025-03-20",
+        "nav": 63.06,
+        "benchmarkNav": 59.91,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-05-19",
-        "nav": 77.27,
-        "benchmarkNav": 73.41,
+        "date": "2025-04-22",
+        "nav": 55.68,
+        "benchmarkNav": 52.89,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-06-17",
-        "nav": 78.08,
-        "benchmarkNav": 74.18,
+        "date": "2025-05-22",
+        "nav": 62.65,
+        "benchmarkNav": 59.51,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-07-16",
-        "nav": 80.32,
-        "benchmarkNav": 76.31,
+        "date": "2025-06-20",
+        "nav": 62.73,
+        "benchmarkNav": 59.6,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-08-14",
-        "nav": 82.05,
-        "benchmarkNav": 77.95,
+        "date": "2025-07-21",
+        "nav": 65.28,
+        "benchmarkNav": 62.01,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-15",
-        "nav": 80.27,
-        "benchmarkNav": 76.26,
+        "date": "2025-08-19",
+        "nav": 66.56,
+        "benchmarkNav": 63.23,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-24",
-        "nav": 82.75,
-        "benchmarkNav": 78.61,
+        "date": "2025-09-17",
+        "nav": 67.55,
+        "benchmarkNav": 64.17,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-10-16",
+        "nav": 68.88,
+        "benchmarkNav": 65.44,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-11-14",
+        "nav": 70.39,
+        "benchmarkNav": 66.87,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-12-15",
+        "nav": 70.41,
+        "benchmarkNav": 66.89,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-01-20",
+        "nav": 70.45,
+        "benchmarkNav": 66.93,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-02-18",
+        "nav": 70.8,
+        "benchmarkNav": 67.26,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-03-19",
+        "nav": 69.86,
+        "benchmarkNav": 66.36,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-04-21",
+        "nav": 73.21,
+        "benchmarkNav": 69.55,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-05-21",
+        "nav": 78.27,
+        "benchmarkNav": 74.36,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-06-19",
+        "nav": 79.75,
+        "benchmarkNav": 75.77,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-07-20",
+        "nav": 79.61,
+        "benchmarkNav": 75.63,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-08-18",
+        "nav": 81.06,
+        "benchmarkNav": 77.01,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-09-17",
+        "nav": 81.23,
+        "benchmarkNav": 77.17,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-09-25",
+        "nav": 82.97,
+        "benchmarkNav": 78.82,
         "riskFreeNav": 100
       }
     ],
@@ -457,425 +512,425 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "EUROPE_EQUITY",
     "categoryLabel": "Renta Variable Europa (MSCI Europe / Stoxx)",
     "isSafeHaven": false,
-    "currentNAV": 41.1138,
+    "currentNAV": 41.2495,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P00000RQ8.F",
     "sharesHeld": 0,
     "purchasePriceAvg": 0,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": -2.97,
-    "return3M": 0.36,
-    "return6M": 12.8,
-    "return12M": 18.09,
-    "return12Minus1M": 20.89,
-    "return3YAnnualized": 15.19,
-    "score12M": 0.18087792212268394,
-    "score12_1": 0.20891097866124175,
-    "scoreEquilibrado": 0.12954192997409017,
-    "scoreProgresivo": 0.032880680794456454,
-    "ytd": 0.10134608430104053,
-    "ret3yAnnual": 0.15192916073920637,
-    "ret5yAnnual": 0.09952005573543699,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": -2.6,
+    "return3M": 0.69,
+    "return6M": 12.1,
+    "return12M": 19.2,
+    "return12Minus1M": 21.76,
+    "return3YAnnualized": 15.55,
+    "score12M": 0.1919616024781543,
+    "score12_1": 0.2175770592006716,
+    "scoreEquilibrado": 0.1336431859106003,
+    "scoreProgresivo": 0.03506039677478352,
+    "ytd": 0.10498118160753256,
+    "ret3yAnnual": 0.1554562640295638,
+    "ret5yAnnual": 0.10337992599161216,
     "periodReturns": {
-      "1d": -0.006560300396517671,
-      "1w": -0.00822104181441874,
-      "1m": -0.029671237402940753,
-      "3m": 0.0035564256091933366,
-      "6m": 0.1279722793030318,
-      "1y": 0.18087792212268394,
-      "2y": 0.29223254892963,
-      "3y": 0.5285417921434783,
-      "5y": 0.6069996325857365
+      "1d": 0.0033005949340609853,
+      "1w": 0.006284168335695561,
+      "1m": -0.025972032661619848,
+      "3m": 0.006868758863603608,
+      "6m": 0.12096210966267473,
+      "1y": 0.1919616024781543,
+      "2y": 0.2976723408405244,
+      "3y": 0.5426255992939364,
+      "5y": 0.6354052682493616
     },
     "periodPrices": {
-      "1d": 41.3853,
-      "1w": 41.4546,
-      "1m": 42.371,
+      "1d": 41.1138,
+      "1w": 40.9919,
+      "1m": 42.3494,
       "3m": 40.9681,
-      "6m": 36.4493,
-      "1y": 34.8163,
-      "2y": 31.8161,
-      "3y": 26.8974,
-      "5y": 25.5842
+      "6m": 36.7983,
+      "1y": 34.6064,
+      "2y": 31.7873,
+      "3y": 26.7398,
+      "5y": 25.2228
     },
-    "volatility1Y": 12.35,
-    "sharpeRatio": 1.17,
-    "jensenAlpha": 4.37,
-    "sortinoRatio": 1.8,
+    "volatility1Y": 12.33,
+    "sharpeRatio": 1.26,
+    "jensenAlpha": 5.47,
+    "sortinoRatio": 1.94,
     "beta": 0.85,
     "maxDrawdown": -19.29,
     "history": [
       {
-        "date": "2021-09-27",
-        "nav": 25.58,
-        "benchmarkNav": 24.3,
+        "date": "2021-09-29",
+        "nav": 25.22,
+        "benchmarkNav": 23.96,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-10-26",
-        "nav": 26.41,
-        "benchmarkNav": 25.09,
+        "date": "2021-10-28",
+        "nav": 26.37,
+        "benchmarkNav": 25.06,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-11-24",
-        "nav": 26.68,
-        "benchmarkNav": 25.35,
+        "date": "2021-11-26",
+        "nav": 25.81,
+        "benchmarkNav": 24.52,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-12-23",
-        "nav": 26.92,
-        "benchmarkNav": 25.57,
+        "date": "2021-12-29",
+        "nav": 27.17,
+        "benchmarkNav": 25.82,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-01-27",
-        "nav": 26.39,
-        "benchmarkNav": 25.07,
+        "date": "2022-01-31",
+        "nav": 26.29,
+        "benchmarkNav": 24.98,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-02-25",
-        "nav": 25.53,
-        "benchmarkNav": 24.25,
+        "date": "2022-03-01",
+        "nav": 24.91,
+        "benchmarkNav": 23.66,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-03-28",
-        "nav": 25.67,
-        "benchmarkNav": 24.39,
+        "date": "2022-03-30",
+        "nav": 25.96,
+        "benchmarkNav": 24.66,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-04-28",
-        "nav": 25.39,
-        "benchmarkNav": 24.12,
+        "date": "2022-05-02",
+        "nav": 25.25,
+        "benchmarkNav": 23.99,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-05-27",
-        "nav": 25.44,
-        "benchmarkNav": 24.16,
+        "date": "2022-05-31",
+        "nav": 25.42,
+        "benchmarkNav": 24.15,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-06-27",
-        "nav": 23.88,
-        "benchmarkNav": 22.69,
+        "date": "2022-06-29",
+        "nav": 23.81,
+        "benchmarkNav": 22.62,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-07-26",
-        "nav": 24.57,
-        "benchmarkNav": 23.34,
+        "date": "2022-07-28",
+        "nav": 24.93,
+        "benchmarkNav": 23.68,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-08-24",
-        "nav": 24.98,
-        "benchmarkNav": 23.73,
+        "date": "2022-08-26",
+        "nav": 24.64,
+        "benchmarkNav": 23.41,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-09-23",
-        "nav": 22.62,
-        "benchmarkNav": 21.48,
+        "date": "2022-09-27",
+        "nav": 22.51,
+        "benchmarkNav": 21.39,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-10-24",
-        "nav": 23.3,
-        "benchmarkNav": 22.14,
+        "date": "2022-10-26",
+        "nav": 23.78,
+        "benchmarkNav": 22.6,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-11-22",
-        "nav": 25.28,
-        "benchmarkNav": 24.01,
+        "date": "2022-11-24",
+        "nav": 25.54,
+        "benchmarkNav": 24.26,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-12-21",
-        "nav": 25.03,
-        "benchmarkNav": 23.78,
+        "date": "2022-12-23",
+        "nav": 24.79,
+        "benchmarkNav": 23.55,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-01-24",
-        "nav": 26.34,
-        "benchmarkNav": 25.02,
+        "date": "2023-01-26",
+        "nav": 26.37,
+        "benchmarkNav": 25.05,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-02-22",
-        "nav": 26.89,
-        "benchmarkNav": 25.54,
+        "date": "2023-02-24",
+        "nav": 26.61,
+        "benchmarkNav": 25.28,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-03-23",
-        "nav": 26.05,
-        "benchmarkNav": 24.75,
+        "date": "2023-03-27",
+        "nav": 26,
+        "benchmarkNav": 24.7,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-04-25",
-        "nav": 27.47,
-        "benchmarkNav": 26.09,
+        "date": "2023-04-27",
+        "nav": 27.29,
+        "benchmarkNav": 25.93,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-05-25",
-        "nav": 27.06,
-        "benchmarkNav": 25.7,
+        "date": "2023-05-29",
+        "nav": 27.34,
+        "benchmarkNav": 25.98,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-06-23",
-        "nav": 26.94,
+        "date": "2023-06-27",
+        "nav": 26.93,
         "benchmarkNav": 25.59,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-07-24",
-        "nav": 27.68,
-        "benchmarkNav": 26.3,
+        "date": "2023-07-26",
+        "nav": 27.65,
+        "benchmarkNav": 26.27,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-08-22",
+        "date": "2023-08-24",
         "nav": 26.93,
-        "benchmarkNav": 25.58,
+        "benchmarkNav": 25.59,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-09-20",
-        "nav": 27.51,
-        "benchmarkNav": 26.13,
+        "date": "2023-09-22",
+        "nav": 27.07,
+        "benchmarkNav": 25.72,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-10-19",
-        "nav": 26.3,
-        "benchmarkNav": 24.99,
+        "date": "2023-10-23",
+        "nav": 25.92,
+        "benchmarkNav": 24.62,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-11-17",
-        "nav": 27.23,
-        "benchmarkNav": 25.87,
+        "date": "2023-11-21",
+        "nav": 27.25,
+        "benchmarkNav": 25.88,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-12-18",
-        "nav": 28.4,
-        "benchmarkNav": 26.98,
+        "date": "2023-12-20",
+        "nav": 28.55,
+        "benchmarkNav": 27.12,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-01-19",
-        "nav": 28.09,
-        "benchmarkNav": 26.68,
+        "date": "2024-01-23",
+        "nav": 28.23,
+        "benchmarkNav": 26.82,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-02-19",
-        "nav": 29.5,
-        "benchmarkNav": 28.03,
+        "date": "2024-02-21",
+        "nav": 29.42,
+        "benchmarkNav": 27.95,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-03-19",
-        "nav": 30.33,
-        "benchmarkNav": 28.82,
+        "date": "2024-03-21",
+        "nav": 30.62,
+        "benchmarkNav": 29.09,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-04-19",
-        "nav": 30.1,
-        "benchmarkNav": 28.59,
+        "date": "2024-04-23",
+        "nav": 30.66,
+        "benchmarkNav": 29.13,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-05-21",
-        "nav": 31.86,
-        "benchmarkNav": 30.27,
+        "date": "2024-05-23",
+        "nav": 31.78,
+        "benchmarkNav": 30.19,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-06-19",
-        "nav": 31.45,
+        "date": "2024-06-21",
+        "nav": 31.52,
+        "benchmarkNav": 29.94,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-07-22",
+        "nav": 31.46,
         "benchmarkNav": 29.88,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-07-18",
-        "nav": 31.39,
-        "benchmarkNav": 29.82,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-08-16",
-        "nav": 31.32,
-        "benchmarkNav": 29.76,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-09-16",
-        "nav": 31.53,
-        "benchmarkNav": 29.96,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-10-15",
-        "nav": 31.91,
-        "benchmarkNav": 30.31,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-11-13",
-        "nav": 30.75,
-        "benchmarkNav": 29.21,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-12-12",
-        "nav": 31.94,
-        "benchmarkNav": 30.34,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-01-17",
-        "nav": 32.2,
-        "benchmarkNav": 30.59,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-02-17",
-        "nav": 34.22,
-        "benchmarkNav": 32.51,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-03-18",
-        "nav": 34.17,
-        "benchmarkNav": 32.46,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-04-16",
+        "date": "2024-08-20",
         "nav": 31.38,
         "benchmarkNav": 29.81,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-05-20",
-        "nav": 34.64,
-        "benchmarkNav": 32.91,
+        "date": "2024-09-18",
+        "nav": 31.48,
+        "benchmarkNav": 29.91,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-06-18",
-        "nav": 33.85,
-        "benchmarkNav": 32.16,
+        "date": "2024-10-17",
+        "nav": 32.11,
+        "benchmarkNav": 30.5,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-07-17",
-        "nav": 34.27,
-        "benchmarkNav": 32.55,
+        "date": "2024-11-15",
+        "nav": 30.85,
+        "benchmarkNav": 29.31,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-08-15",
-        "nav": 34.73,
-        "benchmarkNav": 32.99,
+        "date": "2024-12-16",
+        "nav": 31.68,
+        "benchmarkNav": 30.1,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-09-15",
-        "nav": 35.07,
-        "benchmarkNav": 33.32,
+        "date": "2025-01-21",
+        "nav": 32.34,
+        "benchmarkNav": 30.72,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-10-14",
-        "nav": 35.54,
-        "benchmarkNav": 33.76,
+        "date": "2025-02-19",
+        "nav": 34.04,
+        "benchmarkNav": 32.34,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-11-12",
-        "nav": 36.84,
-        "benchmarkNav": 35,
+        "date": "2025-03-20",
+        "nav": 34.17,
+        "benchmarkNav": 32.47,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-12-11",
-        "nav": 36.65,
-        "benchmarkNav": 34.82,
+        "date": "2025-04-22",
+        "nav": 31.48,
+        "benchmarkNav": 29.91,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-01-16",
-        "nav": 38.71,
-        "benchmarkNav": 36.77,
+        "date": "2025-05-22",
+        "nav": 34.41,
+        "benchmarkNav": 32.69,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-02-16",
-        "nav": 38.98,
-        "benchmarkNav": 37.03,
+        "date": "2025-06-20",
+        "nav": 33.63,
+        "benchmarkNav": 31.95,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-03-17",
-        "nav": 38.13,
-        "benchmarkNav": 36.22,
+        "date": "2025-07-21",
+        "nav": 34.22,
+        "benchmarkNav": 32.51,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-04-17",
-        "nav": 39.75,
-        "benchmarkNav": 37.76,
+        "date": "2025-08-19",
+        "nav": 34.99,
+        "benchmarkNav": 33.24,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-05-19",
-        "nav": 39.14,
-        "benchmarkNav": 37.19,
+        "date": "2025-09-17",
+        "nav": 34.67,
+        "benchmarkNav": 32.94,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-06-17",
-        "nav": 41.12,
-        "benchmarkNav": 39.06,
+        "date": "2025-10-16",
+        "nav": 35.99,
+        "benchmarkNav": 34.19,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-07-16",
-        "nav": 41.44,
-        "benchmarkNav": 39.36,
+        "date": "2025-11-14",
+        "nav": 36.24,
+        "benchmarkNav": 34.43,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-08-14",
-        "nav": 42.45,
-        "benchmarkNav": 40.33,
+        "date": "2025-12-15",
+        "nav": 36.7,
+        "benchmarkNav": 34.87,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-15",
+        "date": "2026-01-20",
+        "nav": 37.98,
+        "benchmarkNav": 36.08,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-02-18",
+        "nav": 39.63,
+        "benchmarkNav": 37.65,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-03-19",
+        "nav": 36.92,
+        "benchmarkNav": 35.07,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-04-21",
+        "nav": 39.21,
+        "benchmarkNav": 37.25,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-05-21",
+        "nav": 39.79,
+        "benchmarkNav": 37.8,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-06-19",
         "nav": 40.92,
         "benchmarkNav": 38.87,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-24",
-        "nav": 41.11,
-        "benchmarkNav": 39.06,
+        "date": "2026-07-20",
+        "nav": 41.19,
+        "benchmarkNav": 39.13,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-08-18",
+        "nav": 42.08,
+        "benchmarkNav": 39.98,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-09-17",
+        "nav": 41.45,
+        "benchmarkNav": 39.38,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-09-25",
+        "nav": 41.25,
+        "benchmarkNav": 39.19,
         "riskFreeNav": 100
       }
     ],
@@ -891,425 +946,425 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "EMERGING_EQUITY",
     "categoryLabel": "Renta Variable Mercados Emergentes",
     "isSafeHaven": false,
-    "currentNAV": 318.3561,
+    "currentNAV": 317.7328,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P000060MS.F",
     "sharesHeld": 20,
     "purchasePriceAvg": 280,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": 4.47,
-    "return3M": 2.27,
-    "return6M": 23.41,
-    "return12M": 34.59,
-    "return12Minus1M": 35,
-    "return3YAnnualized": 21.37,
-    "score12M": 0.3458647633695058,
-    "score12_1": 0.3500414002453447,
-    "scoreEquilibrado": 0.24772652403849527,
-    "scoreProgresivo": 0.10611853361394077,
-    "ytd": 0.2954628133812418,
-    "ret3yAnnual": 0.21374187139259293,
-    "ret5yAnnual": 0.09528232456444852,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": 3.28,
+    "return3M": 2.07,
+    "return6M": 24.67,
+    "return12M": 34.34,
+    "return12Minus1M": 37.06,
+    "return3YAnnualized": 21.74,
+    "score12M": 0.34343987427005307,
+    "score12_1": 0.37061347132068034,
+    "scoreEquilibrado": 0.2498805146930921,
+    "scoreProgresivo": 0.10304700860232055,
+    "ytd": 0.2929264650229706,
+    "ret3yAnnual": 0.21744893943746524,
+    "ret5yAnnual": 0.09500918494519817,
     "periodReturns": {
-      "1d": -0.007016099224748107,
-      "1w": 0.036255386243896126,
-      "1m": 0.04469543781859575,
-      "3m": 0.022746723482341746,
-      "6m": 0.23414932552424683,
-      "1y": 0.3458647633695058,
-      "2y": 0.5682558777064644,
-      "3y": 0.7880472999233912,
-      "5y": 0.5762692227138841
+      "1d": -0.0019578704475901043,
+      "1w": 0.018368157373400695,
+      "1m": 0.032846457884401214,
+      "3m": 0.0207443178970661,
+      "6m": 0.2467057132621746,
+      "1y": 0.34343987427005307,
+      "2y": 0.5622556308166751,
+      "3y": 0.8044808067246743,
+      "5y": 0.5743047662272414
     },
     "periodPrices": {
-      "1d": 320.6055,
-      "1w": 307.2178,
-      "1m": 304.7358,
+      "1d": 318.3561,
+      "1w": 312.0019,
+      "1m": 307.6283,
       "3m": 311.2756,
-      "6m": 257.9559,
-      "1y": 236.5439,
-      "2y": 203.0001,
-      "3y": 178.0468,
-      "5y": 201.9681
+      "6m": 254.8579,
+      "1y": 236.5069,
+      "2y": 203.3808,
+      "3y": 176.0799,
+      "5y": 201.8242
     },
-    "volatility1Y": 22.37,
+    "volatility1Y": 22.31,
     "sharpeRatio": 1.38,
-    "jensenAlpha": 14.35,
-    "sortinoRatio": 2.06,
+    "jensenAlpha": 14.1,
+    "sortinoRatio": 2.05,
     "beta": 1.4,
     "maxDrawdown": -23.61,
     "history": [
       {
-        "date": "2021-09-27",
-        "nav": 201.97,
-        "benchmarkNav": 191.87,
+        "date": "2021-09-29",
+        "nav": 201.82,
+        "benchmarkNav": 191.73,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-10-26",
-        "nav": 209.5,
-        "benchmarkNav": 199.02,
+        "date": "2021-10-28",
+        "nav": 204.79,
+        "benchmarkNav": 194.55,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-11-24",
-        "nav": 208.96,
-        "benchmarkNav": 198.51,
+        "date": "2021-11-26",
+        "nav": 202.65,
+        "benchmarkNav": 192.52,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-12-23",
-        "nav": 202.61,
-        "benchmarkNav": 192.48,
+        "date": "2021-12-29",
+        "nav": 201.73,
+        "benchmarkNav": 191.64,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-01-27",
-        "nav": 201.01,
-        "benchmarkNav": 190.96,
+        "date": "2022-01-31",
+        "nav": 202.82,
+        "benchmarkNav": 192.68,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-02-25",
-        "nav": 196.31,
-        "benchmarkNav": 186.49,
+        "date": "2022-03-01",
+        "nav": 196.73,
+        "benchmarkNav": 186.9,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-03-28",
-        "nav": 193.36,
-        "benchmarkNav": 183.69,
+        "date": "2022-03-30",
+        "nav": 194.2,
+        "benchmarkNav": 184.49,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-04-28",
-        "nav": 189.38,
-        "benchmarkNav": 179.91,
+        "date": "2022-05-02",
+        "nav": 192.57,
+        "benchmarkNav": 182.94,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-05-27",
-        "nav": 184.75,
-        "benchmarkNav": 175.51,
+        "date": "2022-05-31",
+        "nav": 190.72,
+        "benchmarkNav": 181.18,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-06-27",
-        "nav": 184.54,
-        "benchmarkNav": 175.31,
+        "date": "2022-06-29",
+        "nav": 184.31,
+        "benchmarkNav": 175.1,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-07-26",
-        "nav": 186.82,
-        "benchmarkNav": 177.48,
+        "date": "2022-07-28",
+        "nav": 187.96,
+        "benchmarkNav": 178.56,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-08-24",
-        "nav": 189.01,
-        "benchmarkNav": 179.56,
+        "date": "2022-08-26",
+        "nav": 192.57,
+        "benchmarkNav": 182.94,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-09-23",
-        "nav": 179.19,
-        "benchmarkNav": 170.23,
+        "date": "2022-09-27",
+        "nav": 178.17,
+        "benchmarkNav": 169.26,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-10-24",
-        "nav": 163.76,
-        "benchmarkNav": 155.57,
+        "date": "2022-10-26",
+        "nav": 162.92,
+        "benchmarkNav": 154.77,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-11-22",
-        "nav": 173.54,
-        "benchmarkNav": 164.87,
+        "date": "2022-11-24",
+        "nav": 174.8,
+        "benchmarkNav": 166.06,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-12-21",
-        "nav": 173.03,
-        "benchmarkNav": 164.38,
+        "date": "2022-12-23",
+        "nav": 173.37,
+        "benchmarkNav": 164.7,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-01-24",
-        "nav": 184.52,
-        "benchmarkNav": 175.29,
+        "date": "2023-01-26",
+        "nav": 187.21,
+        "benchmarkNav": 177.85,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-02-22",
-        "nav": 178.5,
-        "benchmarkNav": 169.57,
+        "date": "2023-02-24",
+        "nav": 178.12,
+        "benchmarkNav": 169.21,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-03-23",
-        "nav": 174.2,
-        "benchmarkNav": 165.49,
+        "date": "2023-03-27",
+        "nav": 173.39,
+        "benchmarkNav": 164.72,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-04-25",
-        "nav": 170.68,
-        "benchmarkNav": 162.15,
+        "date": "2023-04-27",
+        "nav": 171.42,
+        "benchmarkNav": 162.85,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-05-25",
-        "nav": 174.67,
-        "benchmarkNav": 165.94,
+        "date": "2023-05-29",
+        "nav": 176.44,
+        "benchmarkNav": 167.62,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-06-23",
-        "nav": 177.69,
-        "benchmarkNav": 168.81,
+        "date": "2023-06-27",
+        "nav": 177.32,
+        "benchmarkNav": 168.46,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-07-24",
-        "nav": 179.35,
-        "benchmarkNav": 170.38,
+        "date": "2023-07-26",
+        "nav": 182.87,
+        "benchmarkNav": 173.72,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-08-22",
-        "nav": 175.05,
-        "benchmarkNav": 166.3,
+        "date": "2023-08-24",
+        "nav": 178.02,
+        "benchmarkNav": 169.12,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-09-20",
-        "nav": 178.07,
-        "benchmarkNav": 169.16,
+        "date": "2023-09-22",
+        "nav": 177.95,
+        "benchmarkNav": 169.05,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-10-19",
-        "nav": 173.38,
-        "benchmarkNav": 164.71,
+        "date": "2023-10-23",
+        "nav": 170,
+        "benchmarkNav": 161.5,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-11-17",
-        "nav": 176.5,
-        "benchmarkNav": 167.67,
+        "date": "2023-11-21",
+        "nav": 177.89,
+        "benchmarkNav": 169,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-12-18",
-        "nav": 179.83,
-        "benchmarkNav": 170.84,
+        "date": "2023-12-20",
+        "nav": 178.82,
+        "benchmarkNav": 169.88,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-01-19",
-        "nav": 175.74,
-        "benchmarkNav": 166.95,
+        "date": "2024-01-23",
+        "nav": 176.09,
+        "benchmarkNav": 167.29,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-02-19",
-        "nav": 185.86,
-        "benchmarkNav": 176.57,
+        "date": "2024-02-21",
+        "nav": 185.97,
+        "benchmarkNav": 176.67,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-03-19",
-        "nav": 186.87,
-        "benchmarkNav": 177.53,
+        "date": "2024-03-21",
+        "nav": 190.73,
+        "benchmarkNav": 181.19,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-04-19",
-        "nav": 186.29,
-        "benchmarkNav": 176.97,
+        "date": "2024-04-23",
+        "nav": 188.6,
+        "benchmarkNav": 179.17,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-05-21",
-        "nav": 199.74,
-        "benchmarkNav": 189.75,
+        "date": "2024-05-23",
+        "nav": 200.02,
+        "benchmarkNav": 190.02,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-06-19",
-        "nav": 202.59,
-        "benchmarkNav": 192.46,
+        "date": "2024-06-21",
+        "nav": 202.5,
+        "benchmarkNav": 192.38,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-07-18",
-        "nav": 202.36,
-        "benchmarkNav": 192.24,
+        "date": "2024-07-22",
+        "nav": 199.28,
+        "benchmarkNav": 189.31,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-08-16",
-        "nav": 199.21,
-        "benchmarkNav": 189.25,
+        "date": "2024-08-20",
+        "nav": 198.41,
+        "benchmarkNav": 188.49,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-09-16",
-        "nav": 195.15,
-        "benchmarkNav": 185.39,
+        "date": "2024-09-18",
+        "nav": 195.53,
+        "benchmarkNav": 185.76,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-10-15",
-        "nav": 211.69,
-        "benchmarkNav": 201.11,
+        "date": "2024-10-17",
+        "nav": 210.63,
+        "benchmarkNav": 200.1,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-11-13",
-        "nav": 207.88,
-        "benchmarkNav": 197.48,
+        "date": "2024-11-15",
+        "nav": 207.38,
+        "benchmarkNav": 197.01,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-12-12",
-        "nav": 213.82,
-        "benchmarkNav": 203.13,
+        "date": "2024-12-16",
+        "nav": 211.35,
+        "benchmarkNav": 200.78,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-01-17",
-        "nav": 209.9,
-        "benchmarkNav": 199.4,
+        "date": "2025-01-21",
+        "nav": 210,
+        "benchmarkNav": 199.5,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-02-17",
-        "nav": 218.24,
-        "benchmarkNav": 207.33,
+        "date": "2025-02-19",
+        "nav": 220.66,
+        "benchmarkNav": 209.62,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-03-18",
-        "nav": 212.55,
-        "benchmarkNav": 201.92,
+        "date": "2025-03-20",
+        "nav": 213.15,
+        "benchmarkNav": 202.5,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-04-16",
-        "nav": 189.05,
-        "benchmarkNav": 179.6,
+        "date": "2025-04-22",
+        "nav": 190.02,
+        "benchmarkNav": 180.52,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-05-20",
-        "nav": 210.97,
-        "benchmarkNav": 200.42,
+        "date": "2025-05-22",
+        "nav": 210.21,
+        "benchmarkNav": 199.7,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-06-18",
-        "nav": 211.59,
-        "benchmarkNav": 201.01,
+        "date": "2025-06-20",
+        "nav": 210.9,
+        "benchmarkNav": 200.36,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-07-17",
-        "nav": 219.25,
-        "benchmarkNav": 208.29,
+        "date": "2025-07-21",
+        "nav": 219.41,
+        "benchmarkNav": 208.44,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-08-15",
-        "nav": 222.97,
-        "benchmarkNav": 211.82,
+        "date": "2025-08-19",
+        "nav": 223.03,
+        "benchmarkNav": 211.88,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-09-15",
-        "nav": 232.14,
-        "benchmarkNav": 220.53,
+        "date": "2025-09-17",
+        "nav": 233.68,
+        "benchmarkNav": 222,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-10-14",
-        "nav": 237.44,
-        "benchmarkNav": 225.57,
+        "date": "2025-10-16",
+        "nav": 243.14,
+        "benchmarkNav": 230.98,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-11-12",
-        "nav": 249.56,
-        "benchmarkNav": 237.08,
+        "date": "2025-11-14",
+        "nav": 245.25,
+        "benchmarkNav": 232.99,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-12-11",
-        "nav": 241.07,
-        "benchmarkNav": 229.02,
+        "date": "2025-12-15",
+        "nav": 240.43,
+        "benchmarkNav": 228.41,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-01-16",
-        "nav": 263.94,
-        "benchmarkNav": 250.74,
+        "date": "2026-01-20",
+        "nav": 260.17,
+        "benchmarkNav": 247.16,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-02-16",
-        "nav": 270.75,
-        "benchmarkNav": 257.22,
+        "date": "2026-02-18",
+        "nav": 272.01,
+        "benchmarkNav": 258.41,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-03-17",
-        "nav": 268.2,
-        "benchmarkNav": 254.79,
+        "date": "2026-03-19",
+        "nav": 264.95,
+        "benchmarkNav": 251.7,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-04-17",
-        "nav": 279.65,
-        "benchmarkNav": 265.66,
+        "date": "2026-04-21",
+        "nav": 284.31,
+        "benchmarkNav": 270.09,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-05-19",
-        "nav": 292.99,
-        "benchmarkNav": 278.34,
+        "date": "2026-05-21",
+        "nav": 299.67,
+        "benchmarkNav": 284.69,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-06-17",
-        "nav": 319.59,
-        "benchmarkNav": 303.61,
+        "date": "2026-06-19",
+        "nav": 323.71,
+        "benchmarkNav": 307.53,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-07-16",
-        "nav": 302.78,
-        "benchmarkNav": 287.64,
+        "date": "2026-07-20",
+        "nav": 295.22,
+        "benchmarkNav": 280.46,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-08-14",
-        "nav": 306.38,
-        "benchmarkNav": 291.07,
+        "date": "2026-08-18",
+        "nav": 305.16,
+        "benchmarkNav": 289.9,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-15",
-        "nav": 304.15,
-        "benchmarkNav": 288.94,
+        "date": "2026-09-17",
+        "nav": 307.22,
+        "benchmarkNav": 291.86,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-24",
-        "nav": 318.36,
-        "benchmarkNav": 302.44,
+        "date": "2026-09-25",
+        "nav": 317.73,
+        "benchmarkNav": 301.85,
         "riskFreeNav": 100
       }
     ],
@@ -1325,425 +1380,425 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "GLOBAL_SMALL_CAP",
     "categoryLabel": "Small Caps Globales Indexadas",
     "isSafeHaven": false,
-    "currentNAV": 442.1294,
+    "currentNAV": 443.2617,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P00012I66.F",
     "sharesHeld": 0,
     "purchasePriceAvg": 0,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": -1.91,
-    "return3M": -2.17,
-    "return6M": 14.32,
-    "return12M": 20.59,
-    "return12Minus1M": 24.64,
-    "return3YAnnualized": 15.1,
-    "score12M": 0.20594548048726646,
-    "score12_1": 0.24640488553401085,
-    "scoreEquilibrado": 0.14160545010073355,
-    "scoreProgresivo": 0.035101263086067494,
-    "ytd": 0.15963865533875676,
-    "ret3yAnnual": 0.15098558732247613,
-    "ret5yAnnual": 0.06978021844007265,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": -1.95,
+    "return3M": -1.92,
+    "return6M": 15.2,
+    "return12M": 21.27,
+    "return12Minus1M": 24.58,
+    "return3YAnnualized": 15.67,
+    "score12M": 0.21270653085076807,
+    "score12_1": 0.24578656097726337,
+    "scoreEquilibrado": 0.14809892450810827,
+    "scoreProgresivo": 0.03811255208194734,
+    "ytd": 0.16260850726319354,
+    "ret3yAnnual": 0.15669902892694876,
+    "ret5yAnnual": 0.07408246518347905,
     "periodReturns": {
-      "1d": -0.0032484140619875035,
-      "1w": -0.003352444430618773,
-      "1m": -0.01907779032290635,
-      "3m": -0.021703852429380888,
-      "6m": 0.14324493447658826,
-      "1y": 0.20594548048726646,
-      "2y": 0.3016619595819767,
-      "3y": 0.5247886699284834,
-      "5y": 0.4011118783633083
+      "1d": 0.0025610149426842366,
+      "1w": 0.0032076903090771935,
+      "1m": -0.019472008738579905,
+      "3m": -0.019198421377082053,
+      "6m": 0.15195114452713554,
+      "1y": 0.21270653085076807,
+      "2y": 0.3170487121341776,
+      "3y": 0.5476085235104597,
+      "5y": 0.4295130786109853
     },
     "periodPrices": {
-      "1d": 443.5703,
-      "1w": 443.6166,
-      "1m": 450.7283,
+      "1d": 442.1294,
+      "1w": 441.8444,
+      "1m": 452.0643,
       "3m": 451.9382,
-      "6m": 386.732,
-      "1y": 366.6247,
-      "2y": 339.6653,
-      "3y": 289.9611,
-      "5y": 315.5561
+      "6m": 384.7921,
+      "1y": 365.5144,
+      "2y": 336.5568,
+      "3y": 286.4172,
+      "5y": 310.0788
     },
-    "volatility1Y": 12.42,
-    "sharpeRatio": 1.36,
-    "jensenAlpha": 6.75,
-    "sortinoRatio": 2.07,
+    "volatility1Y": 12.41,
+    "sharpeRatio": 1.42,
+    "jensenAlpha": 7.43,
+    "sortinoRatio": 2.15,
     "beta": 0.86,
     "maxDrawdown": -22.27,
     "history": [
       {
-        "date": "2021-09-27",
-        "nav": 315.56,
-        "benchmarkNav": 299.78,
+        "date": "2021-09-29",
+        "nav": 310.08,
+        "benchmarkNav": 294.57,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-10-26",
-        "nav": 321.06,
-        "benchmarkNav": 305.01,
+        "date": "2021-10-28",
+        "nav": 319.08,
+        "benchmarkNav": 303.12,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-11-24",
-        "nav": 329.6,
-        "benchmarkNav": 313.12,
+        "date": "2021-11-26",
+        "nav": 317.94,
+        "benchmarkNav": 302.04,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-12-23",
-        "nav": 319.54,
-        "benchmarkNav": 303.57,
+        "date": "2021-12-29",
+        "nav": 322.15,
+        "benchmarkNav": 306.04,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-01-27",
-        "nav": 293,
-        "benchmarkNav": 278.35,
+        "date": "2022-01-31",
+        "nav": 301.6,
+        "benchmarkNav": 286.52,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-02-25",
-        "nav": 299.58,
-        "benchmarkNav": 284.6,
+        "date": "2022-03-01",
+        "nav": 299,
+        "benchmarkNav": 284.05,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-03-28",
-        "nav": 310.7,
-        "benchmarkNav": 295.17,
+        "date": "2022-03-30",
+        "nav": 309.83,
+        "benchmarkNav": 294.34,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-04-28",
-        "nav": 303.84,
-        "benchmarkNav": 288.65,
+        "date": "2022-05-02",
+        "nav": 299.23,
+        "benchmarkNav": 284.27,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-05-27",
-        "nav": 295.37,
-        "benchmarkNav": 280.6,
+        "date": "2022-05-31",
+        "nav": 293.68,
+        "benchmarkNav": 279,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-06-27",
-        "nav": 276.67,
-        "benchmarkNav": 262.84,
+        "date": "2022-06-29",
+        "nav": 273.28,
+        "benchmarkNav": 259.62,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-07-26",
-        "nav": 292.43,
-        "benchmarkNav": 277.81,
+        "date": "2022-07-28",
+        "nav": 301,
+        "benchmarkNav": 285.95,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-08-24",
-        "nav": 310.16,
-        "benchmarkNav": 294.65,
+        "date": "2022-08-26",
+        "nav": 305.54,
+        "benchmarkNav": 290.27,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-09-23",
-        "nav": 280.67,
-        "benchmarkNav": 266.63,
+        "date": "2022-09-27",
+        "nav": 277.95,
+        "benchmarkNav": 264.05,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-10-24",
-        "nav": 281.17,
-        "benchmarkNav": 267.11,
+        "date": "2022-10-26",
+        "nav": 286.17,
+        "benchmarkNav": 271.86,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-11-22",
-        "nav": 295.55,
-        "benchmarkNav": 280.77,
+        "date": "2022-11-24",
+        "nav": 295.52,
+        "benchmarkNav": 280.74,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-12-21",
-        "nav": 280.73,
-        "benchmarkNav": 266.69,
+        "date": "2022-12-23",
+        "nav": 279.08,
+        "benchmarkNav": 265.13,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-01-24",
-        "nav": 293.72,
-        "benchmarkNav": 279.04,
+        "date": "2023-01-26",
+        "nav": 295.97,
+        "benchmarkNav": 281.17,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-02-22",
-        "nav": 298.47,
-        "benchmarkNav": 283.55,
+        "date": "2023-02-24",
+        "nav": 299.66,
+        "benchmarkNav": 284.68,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-03-23",
-        "nav": 273.89,
-        "benchmarkNav": 260.19,
+        "date": "2023-03-27",
+        "nav": 278.18,
+        "benchmarkNav": 264.27,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-04-25",
-        "nav": 278.53,
-        "benchmarkNav": 264.61,
+        "date": "2023-04-27",
+        "nav": 278.58,
+        "benchmarkNav": 264.65,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-05-25",
-        "nav": 281.81,
-        "benchmarkNav": 267.72,
+        "date": "2023-05-29",
+        "nav": 284.58,
+        "benchmarkNav": 270.35,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-06-23",
-        "nav": 285.53,
-        "benchmarkNav": 271.25,
+        "date": "2023-06-27",
+        "nav": 286.83,
+        "benchmarkNav": 272.49,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-07-24",
-        "nav": 299.28,
-        "benchmarkNav": 284.31,
+        "date": "2023-07-26",
+        "nav": 301.64,
+        "benchmarkNav": 286.56,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-08-22",
-        "nav": 289.2,
-        "benchmarkNav": 274.74,
+        "date": "2023-08-24",
+        "nav": 289.71,
+        "benchmarkNav": 275.22,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-09-20",
-        "nav": 291.82,
-        "benchmarkNav": 277.23,
+        "date": "2023-09-22",
+        "nav": 288.04,
+        "benchmarkNav": 273.64,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-10-19",
-        "nav": 276.74,
-        "benchmarkNav": 262.9,
+        "date": "2023-10-23",
+        "nav": 270.24,
+        "benchmarkNav": 256.73,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-11-17",
-        "nav": 284.67,
-        "benchmarkNav": 270.44,
+        "date": "2023-11-21",
+        "nav": 283,
+        "benchmarkNav": 268.85,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-12-18",
-        "nav": 307.13,
-        "benchmarkNav": 291.77,
+        "date": "2023-12-20",
+        "nav": 306.93,
+        "benchmarkNav": 291.58,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-01-19",
-        "nav": 304.42,
-        "benchmarkNav": 289.2,
+        "date": "2024-01-23",
+        "nav": 308.94,
+        "benchmarkNav": 293.49,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-02-19",
-        "nav": 317.52,
-        "benchmarkNav": 301.64,
+        "date": "2024-02-21",
+        "nav": 313.39,
+        "benchmarkNav": 297.72,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-03-19",
-        "nav": 320.34,
-        "benchmarkNav": 304.32,
+        "date": "2024-03-21",
+        "nav": 327.11,
+        "benchmarkNav": 310.76,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-04-19",
-        "nav": 314.51,
-        "benchmarkNav": 298.78,
+        "date": "2024-04-23",
+        "nav": 320.75,
+        "benchmarkNav": 304.71,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-05-21",
-        "nav": 330.23,
-        "benchmarkNav": 313.72,
+        "date": "2024-05-23",
+        "nav": 325.54,
+        "benchmarkNav": 309.26,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-06-19",
-        "nav": 323.61,
-        "benchmarkNav": 307.43,
+        "date": "2024-06-21",
+        "nav": 324.85,
+        "benchmarkNav": 308.6,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-07-18",
-        "nav": 336.17,
-        "benchmarkNav": 319.36,
+        "date": "2024-07-22",
+        "nav": 337.57,
+        "benchmarkNav": 320.69,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-08-16",
-        "nav": 330.21,
-        "benchmarkNav": 313.7,
+        "date": "2024-08-20",
+        "nav": 328.5,
+        "benchmarkNav": 312.08,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-09-16",
-        "nav": 334.4,
-        "benchmarkNav": 317.68,
+        "date": "2024-09-18",
+        "nav": 335.98,
+        "benchmarkNav": 319.18,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-10-15",
-        "nav": 349.07,
-        "benchmarkNav": 331.61,
+        "date": "2024-10-17",
+        "nav": 353.05,
+        "benchmarkNav": 335.39,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-11-13",
-        "nav": 363.42,
-        "benchmarkNav": 345.25,
+        "date": "2024-11-15",
+        "nav": 359.09,
+        "benchmarkNav": 341.13,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-12-12",
-        "nav": 371.06,
-        "benchmarkNav": 352.51,
+        "date": "2024-12-16",
+        "nav": 367.77,
+        "benchmarkNav": 349.39,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-01-17",
-        "nav": 367.49,
-        "benchmarkNav": 349.12,
+        "date": "2025-01-21",
+        "nav": 369.84,
+        "benchmarkNav": 351.35,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-02-17",
-        "nav": 368.69,
-        "benchmarkNav": 350.25,
+        "date": "2025-02-19",
+        "nav": 370.11,
+        "benchmarkNav": 351.61,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-03-18",
-        "nav": 334.55,
-        "benchmarkNav": 317.82,
+        "date": "2025-03-20",
+        "nav": 338.52,
+        "benchmarkNav": 321.6,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-04-16",
-        "nav": 301.09,
-        "benchmarkNav": 286.04,
+        "date": "2025-04-22",
+        "nav": 302.83,
+        "benchmarkNav": 287.68,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-05-20",
-        "nav": 339.47,
-        "benchmarkNav": 322.5,
+        "date": "2025-05-22",
+        "nav": 333.32,
+        "benchmarkNav": 316.65,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-06-18",
-        "nav": 336.86,
-        "benchmarkNav": 320.01,
+        "date": "2025-06-20",
+        "nav": 335.38,
+        "benchmarkNav": 318.61,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-07-17",
-        "nav": 350.91,
-        "benchmarkNav": 333.36,
+        "date": "2025-07-21",
+        "nav": 347.26,
+        "benchmarkNav": 329.9,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-08-15",
-        "nav": 354.7,
-        "benchmarkNav": 336.96,
+        "date": "2025-08-19",
+        "nav": 355.91,
+        "benchmarkNav": 338.11,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-09-15",
-        "nav": 366.9,
-        "benchmarkNav": 348.55,
+        "date": "2025-09-17",
+        "nav": 363.93,
+        "benchmarkNav": 345.73,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-10-14",
-        "nav": 373.48,
-        "benchmarkNav": 354.8,
+        "date": "2025-10-16",
+        "nav": 370.78,
+        "benchmarkNav": 352.24,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-11-12",
-        "nav": 374.96,
-        "benchmarkNav": 356.21,
+        "date": "2025-11-14",
+        "nav": 367.69,
+        "benchmarkNav": 349.31,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-12-11",
-        "nav": 383.33,
-        "benchmarkNav": 364.16,
+        "date": "2025-12-15",
+        "nav": 379.42,
+        "benchmarkNav": 360.45,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-01-16",
-        "nav": 407.42,
-        "benchmarkNav": 387.05,
+        "date": "2026-01-20",
+        "nav": 399.37,
+        "benchmarkNav": 379.4,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-02-16",
-        "nav": 407.29,
-        "benchmarkNav": 386.93,
+        "date": "2026-02-18",
+        "nav": 410.83,
+        "benchmarkNav": 390.29,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-03-17",
-        "nav": 398.21,
-        "benchmarkNav": 378.3,
+        "date": "2026-03-19",
+        "nav": 392.76,
+        "benchmarkNav": 373.12,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-04-17",
-        "nav": 418.83,
-        "benchmarkNav": 397.89,
+        "date": "2026-04-21",
+        "nav": 418.1,
+        "benchmarkNav": 397.19,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-05-19",
-        "nav": 420.29,
-        "benchmarkNav": 399.27,
+        "date": "2026-05-21",
+        "nav": 428.97,
+        "benchmarkNav": 407.52,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-06-17",
-        "nav": 440.36,
-        "benchmarkNav": 418.34,
+        "date": "2026-06-19",
+        "nav": 447.81,
+        "benchmarkNav": 425.41,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-07-16",
-        "nav": 445.4,
-        "benchmarkNav": 423.13,
+        "date": "2026-07-20",
+        "nav": 440.86,
+        "benchmarkNav": 418.82,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-08-14",
-        "nav": 459.83,
-        "benchmarkNav": 436.84,
+        "date": "2026-08-18",
+        "nav": 452.24,
+        "benchmarkNav": 429.63,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-15",
-        "nav": 439.12,
-        "benchmarkNav": 417.16,
+        "date": "2026-09-17",
+        "nav": 443.62,
+        "benchmarkNav": 421.44,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-24",
-        "nav": 442.13,
-        "benchmarkNav": 420.02,
+        "date": "2026-09-25",
+        "nav": 443.26,
+        "benchmarkNav": 421.1,
         "riskFreeNav": 100
       }
     ],
@@ -1759,425 +1814,425 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "JAPAN_EQUITY",
     "categoryLabel": "Renta Variable Japón (Topix / MSCI Japan Index)",
     "isSafeHaven": false,
-    "currentNAV": 10.4783,
+    "currentNAV": 10.7196,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P0001CLDI.F",
     "sharesHeld": 0,
     "purchasePriceAvg": 0,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": 2.46,
-    "return3M": 3.46,
-    "return6M": 15.66,
-    "return12M": 27.27,
-    "return12Minus1M": 25.42,
-    "return3YAnnualized": 16.46,
-    "score12M": 0.2726731687172823,
-    "score12_1": 0.25418511387188936,
-    "scoreEquilibrado": 0.19024519509958707,
-    "scoreProgresivo": 0.07883007547213668,
-    "ytd": 0.2278586327310228,
-    "ret3yAnnual": 0.16463926482770752,
-    "ret5yAnnual": 0.09068877174147949,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": 4.26,
+    "return3M": 5.85,
+    "return6M": 19.88,
+    "return12M": 29.72,
+    "return12Minus1M": 27.21,
+    "return3YAnnualized": 17.6,
+    "score12M": 0.29719133075982906,
+    "score12_1": 0.2721288758011431,
+    "scoreEquilibrado": 0.21994442425147753,
+    "scoreProgresivo": 0.10407095974036179,
+    "ytd": 0.25613443014835124,
+    "ret3yAnnual": 0.17603452587308333,
+    "ret5yAnnual": 0.09984234720589646,
     "periodReturns": {
-      "1d": -0.0062781544881216345,
-      "1w": -0.012794301919145212,
-      "1m": 0.024622304796362515,
-      "3m": 0.034648577127396996,
-      "6m": 0.1565963177182217,
-      "1y": 0.2726731687172823,
-      "2y": 0.4081465355050262,
-      "3y": 0.5796987833742897,
-      "5y": 0.5434913901041436
+      "1d": 0.023028544706679366,
+      "1w": 0.016682948111194307,
+      "1m": 0.042600373482726495,
+      "3m": 0.05847502814147765,
+      "6m": 0.1988458441442249,
+      "1y": 0.29719133075982906,
+      "2y": 0.45437277833554934,
+      "3y": 0.6265230255671042,
+      "5y": 0.6093562334854672
     },
     "periodPrices": {
-      "1d": 10.5445,
-      "1w": 10.6141,
-      "1m": 10.2265,
+      "1d": 10.4783,
+      "1w": 10.5437,
+      "1m": 10.2816,
       "3m": 10.1274,
-      "6m": 9.0596,
-      "1y": 8.2333,
-      "2y": 7.4412,
-      "3y": 6.6331,
-      "5y": 6.7887
+      "6m": 8.9416,
+      "1y": 8.2637,
+      "2y": 7.3706,
+      "3y": 6.5905,
+      "5y": 6.6608
     },
-    "volatility1Y": 21.04,
-    "sharpeRatio": 1.12,
-    "jensenAlpha": 7.03,
-    "sortinoRatio": 1.69,
+    "volatility1Y": 21.16,
+    "sharpeRatio": 1.23,
+    "jensenAlpha": 9.48,
+    "sortinoRatio": 1.86,
     "beta": 1.4,
     "maxDrawdown": -19.26,
     "history": [
       {
-        "date": "2021-09-27",
-        "nav": 6.79,
-        "benchmarkNav": 6.45,
+        "date": "2021-09-29",
+        "nav": 6.66,
+        "benchmarkNav": 6.33,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-10-26",
-        "nav": 6.48,
-        "benchmarkNav": 6.16,
+        "date": "2021-10-28",
+        "nav": 6.43,
+        "benchmarkNav": 6.1,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-11-24",
-        "nav": 6.69,
-        "benchmarkNav": 6.36,
+        "date": "2021-11-26",
+        "nav": 6.64,
+        "benchmarkNav": 6.31,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-12-23",
-        "nav": 6.6,
-        "benchmarkNav": 6.27,
+        "date": "2021-12-29",
+        "nav": 6.57,
+        "benchmarkNav": 6.24,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-01-27",
-        "nav": 6.13,
-        "benchmarkNav": 5.83,
+        "date": "2022-01-31",
+        "nav": 6.28,
+        "benchmarkNav": 5.97,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-02-25",
-        "nav": 6.15,
-        "benchmarkNav": 5.84,
+        "date": "2022-03-01",
+        "nav": 6.31,
+        "benchmarkNav": 5.99,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-03-28",
+        "date": "2022-03-30",
         "nav": 6.23,
         "benchmarkNav": 5.92,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-04-28",
-        "nav": 5.94,
-        "benchmarkNav": 5.65,
+        "date": "2022-05-02",
+        "nav": 5.97,
+        "benchmarkNav": 5.67,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-05-27",
-        "nav": 5.98,
-        "benchmarkNav": 5.68,
+        "date": "2022-05-31",
+        "nav": 5.99,
+        "benchmarkNav": 5.69,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-06-27",
-        "nav": 5.66,
-        "benchmarkNav": 5.38,
+        "date": "2022-06-29",
+        "nav": 5.68,
+        "benchmarkNav": 5.39,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-07-26",
-        "nav": 6.04,
-        "benchmarkNav": 5.74,
+        "date": "2022-07-28",
+        "nav": 6.14,
+        "benchmarkNav": 5.83,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-08-24",
-        "nav": 6.19,
-        "benchmarkNav": 5.88,
+        "date": "2022-08-26",
+        "nav": 6.2,
+        "benchmarkNav": 5.89,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-09-22",
-        "nav": 5.89,
-        "benchmarkNav": 5.6,
+        "date": "2022-09-26",
+        "nav": 5.73,
+        "benchmarkNav": 5.44,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-10-21",
-        "nav": 5.53,
-        "benchmarkNav": 5.25,
+        "date": "2022-10-25",
+        "nav": 5.6,
+        "benchmarkNav": 5.32,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-11-21",
+        "date": "2022-11-23",
+        "nav": 5.96,
+        "benchmarkNav": 5.67,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2022-12-22",
         "nav": 5.88,
         "benchmarkNav": 5.59,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-12-20",
-        "nav": 5.89,
-        "benchmarkNav": 5.59,
+        "date": "2023-01-24",
+        "nav": 6.04,
+        "benchmarkNav": 5.74,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-01-20",
+        "date": "2023-02-22",
+        "nav": 5.96,
+        "benchmarkNav": 5.66,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-03-23",
         "nav": 5.92,
-        "benchmarkNav": 5.63,
+        "benchmarkNav": 5.62,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-02-20",
-        "nav": 6.03,
-        "benchmarkNav": 5.73,
+        "date": "2023-04-25",
+        "nav": 6.06,
+        "benchmarkNav": 5.75,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-03-21",
-        "nav": 5.85,
-        "benchmarkNav": 5.55,
+        "date": "2023-05-25",
+        "nav": 6.28,
+        "benchmarkNav": 5.96,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-04-21",
-        "nav": 6.02,
-        "benchmarkNav": 5.72,
+        "date": "2023-06-23",
+        "nav": 6.37,
+        "benchmarkNav": 6.05,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-05-23",
-        "nav": 6.35,
-        "benchmarkNav": 6.03,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-06-21",
-        "nav": 6.5,
-        "benchmarkNav": 6.17,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-07-20",
-        "nav": 6.36,
-        "benchmarkNav": 6.04,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-08-18",
-        "nav": 6.21,
-        "benchmarkNav": 5.9,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-09-18",
-        "nav": 6.76,
-        "benchmarkNav": 6.42,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-10-17",
+        "date": "2023-07-24",
         "nav": 6.42,
         "benchmarkNav": 6.1,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-11-15",
-        "nav": 6.43,
-        "benchmarkNav": 6.11,
+        "date": "2023-08-22",
+        "nav": 6.28,
+        "benchmarkNav": 5.96,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-12-14",
-        "nav": 6.59,
-        "benchmarkNav": 6.27,
+        "date": "2023-09-20",
+        "nav": 6.67,
+        "benchmarkNav": 6.34,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-01-17",
-        "nav": 6.9,
-        "benchmarkNav": 6.56,
+        "date": "2023-10-19",
+        "nav": 6.32,
+        "benchmarkNav": 6.01,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-02-15",
-        "nav": 7.19,
-        "benchmarkNav": 6.83,
+        "date": "2023-11-17",
+        "nav": 6.52,
+        "benchmarkNav": 6.2,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-03-15",
+        "date": "2023-12-18",
+        "nav": 6.57,
+        "benchmarkNav": 6.24,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-01-19",
+        "nav": 6.94,
+        "benchmarkNav": 6.6,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-02-19",
+        "nav": 7.3,
+        "benchmarkNav": 6.94,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-03-19",
+        "nav": 7.52,
+        "benchmarkNav": 7.15,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-04-19",
+        "nav": 7.15,
+        "benchmarkNav": 6.79,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-05-21",
         "nav": 7.34,
         "benchmarkNav": 6.98,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-04-17",
-        "nav": 7.28,
-        "benchmarkNav": 6.92,
+        "date": "2024-06-19",
+        "nav": 7.24,
+        "benchmarkNav": 6.88,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-05-17",
-        "nav": 7.32,
-        "benchmarkNav": 6.96,
+        "date": "2024-07-18",
+        "nav": 7.57,
+        "benchmarkNav": 7.19,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-06-17",
-        "nav": 7.18,
-        "benchmarkNav": 6.82,
+        "date": "2024-08-19",
+        "nav": 7.36,
+        "benchmarkNav": 6.99,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-07-16",
-        "nav": 7.63,
-        "benchmarkNav": 7.25,
+        "date": "2024-09-17",
+        "nav": 7.25,
+        "benchmarkNav": 6.88,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-08-15",
-        "nav": 7.16,
-        "benchmarkNav": 6.8,
+        "date": "2024-10-16",
+        "nav": 7.48,
+        "benchmarkNav": 7.11,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-09-13",
-        "nav": 7.39,
-        "benchmarkNav": 7.02,
+        "date": "2024-11-14",
+        "nav": 7.43,
+        "benchmarkNav": 7.05,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-10-14",
-        "nav": 7.5,
-        "benchmarkNav": 7.13,
+        "date": "2024-12-13",
+        "nav": 7.72,
+        "benchmarkNav": 7.34,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-11-12",
-        "nav": 7.59,
-        "benchmarkNav": 7.21,
+        "date": "2025-01-20",
+        "nav": 7.6,
+        "benchmarkNav": 7.22,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-12-11",
-        "nav": 7.8,
-        "benchmarkNav": 7.41,
+        "date": "2025-02-18",
+        "nav": 7.94,
+        "benchmarkNav": 7.54,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-01-16",
+        "date": "2025-03-19",
+        "nav": 7.73,
+        "benchmarkNav": 7.34,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-04-17",
+        "nav": 7.09,
+        "benchmarkNav": 6.74,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-05-21",
         "nav": 7.62,
         "benchmarkNav": 7.24,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-02-14",
-        "nav": 7.83,
-        "benchmarkNav": 7.43,
+        "date": "2025-06-19",
+        "nav": 7.57,
+        "benchmarkNav": 7.19,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-03-17",
-        "nav": 7.64,
-        "benchmarkNav": 7.25,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-04-15",
-        "nav": 7.04,
-        "benchmarkNav": 6.68,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-05-19",
-        "nav": 7.63,
-        "benchmarkNav": 7.25,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-06-17",
-        "nav": 7.55,
-        "benchmarkNav": 7.18,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-07-16",
+        "date": "2025-07-18",
         "nav": 7.41,
-        "benchmarkNav": 7.03,
+        "benchmarkNav": 7.04,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-08-14",
-        "nav": 8.06,
-        "benchmarkNav": 7.66,
+        "date": "2025-08-18",
+        "nav": 8.22,
+        "benchmarkNav": 7.8,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-09-12",
-        "nav": 8.26,
+        "date": "2025-09-16",
+        "nav": 8.25,
         "benchmarkNav": 7.84,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-10-13",
-        "nav": 8.36,
-        "benchmarkNav": 7.94,
+        "date": "2025-10-15",
+        "nav": 8.32,
+        "benchmarkNav": 7.91,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-11-11",
-        "nav": 8.61,
-        "benchmarkNav": 8.17,
+        "date": "2025-11-13",
+        "nav": 8.72,
+        "benchmarkNav": 8.28,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-12-10",
-        "nav": 8.57,
-        "benchmarkNav": 8.14,
+        "date": "2025-12-12",
+        "nav": 8.63,
+        "benchmarkNav": 8.2,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-01-15",
-        "nav": 9.21,
-        "benchmarkNav": 8.75,
+        "date": "2026-01-19",
+        "nav": 9.16,
+        "benchmarkNav": 8.71,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-02-13",
-        "nav": 9.71,
-        "benchmarkNav": 9.22,
+        "date": "2026-02-17",
+        "nav": 9.52,
+        "benchmarkNav": 9.04,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-03-16",
-        "nav": 9.07,
-        "benchmarkNav": 8.61,
+        "date": "2026-03-18",
+        "nav": 9.3,
+        "benchmarkNav": 8.83,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-04-16",
-        "nav": 9.46,
-        "benchmarkNav": 8.99,
+        "date": "2026-04-20",
+        "nav": 9.4,
+        "benchmarkNav": 8.93,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-05-18",
-        "nav": 9.62,
-        "benchmarkNav": 9.14,
+        "date": "2026-05-20",
+        "nav": 9.55,
+        "benchmarkNav": 9.08,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-06-16",
-        "nav": 10.13,
-        "benchmarkNav": 9.62,
+        "date": "2026-06-18",
+        "nav": 10.42,
+        "benchmarkNav": 9.9,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-07-15",
-        "nav": 10.33,
-        "benchmarkNav": 9.81,
+        "date": "2026-07-17",
+        "nav": 9.8,
+        "benchmarkNav": 9.31,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-08-13",
+        "date": "2026-08-17",
         "nav": 10.6,
         "benchmarkNav": 10.07,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-14",
-        "nav": 10.56,
-        "benchmarkNav": 10.04,
+        "date": "2026-09-16",
+        "nav": 10.53,
+        "benchmarkNav": 10.01,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-24",
-        "nav": 10.48,
-        "benchmarkNav": 9.95,
+        "date": "2026-09-25",
+        "nav": 10.72,
+        "benchmarkNav": 10.18,
         "riskFreeNav": 100
       }
     ],
@@ -2193,52 +2248,52 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "JAPAN_EQUITY",
     "categoryLabel": "Renta Variable Japón (Topix / MSCI Japan Index)",
     "isSafeHaven": false,
-    "currentNAV": 639.34,
+    "currentNAV": 637.78,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P0001IFKL.F",
     "sharesHeld": 0,
     "purchasePriceAvg": 0,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": -2.64,
-    "return3M": 4.75,
-    "return6M": 8.67,
-    "return12M": 15.99,
-    "return12Minus1M": 17.58,
-    "return3YAnnualized": 13.26,
-    "score12M": 0.15990566037735854,
-    "score12_1": 0.17576495443396078,
-    "scoreEquilibrado": 0.1154653189461669,
-    "scoreProgresivo": 0.03700483861452142,
-    "ytd": 0.14335276655102125,
-    "ret3yAnnual": 0.13256584081082812,
-    "ret5yAnnual": 0.06806721803714644,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": -2.54,
+    "return3M": 4.49,
+    "return6M": 9.01,
+    "return12M": 15.58,
+    "return12Minus1M": 17.19,
+    "return3YAnnualized": 13.42,
+    "score12M": 0.15581732511779633,
+    "score12_1": 0.17189262754508183,
+    "scoreEquilibrado": 0.1139210591189064,
+    "scoreProgresivo": 0.036906543079952225,
+    "ytd": 0.14056296720197436,
+    "ret3yAnnual": 0.13424437121216015,
+    "ret5yAnnual": 0.06754548829952323,
     "periodReturns": {
-      "1d": -0.007498020708818998,
-      "1w": -0.0020292207792207417,
-      "1m": -0.026435206334703865,
-      "3m": 0.04748017563405216,
-      "6m": 0.08672151210225731,
-      "1y": 0.15990566037735854,
-      "2y": 0.23118103564482295,
-      "3y": 0.45274830148378764,
-      "5y": 0.3899299969563894
+      "1d": -0.002440016266775258,
+      "1w": -0.0044953641557143875,
+      "1m": -0.025427095748907447,
+      "3m": 0.0449243069663805,
+      "6m": 0.0900917838891071,
+      "1y": 0.15581732511779633,
+      "2y": 0.23502643248581556,
+      "3y": 0.4592170590523257,
+      "5y": 0.386538545154137
     },
     "periodPrices": {
-      "1d": 644.17,
-      "1w": 640.64,
-      "1m": 656.7,
+      "1d": 639.34,
+      "1w": 640.66,
+      "1m": 654.42,
       "3m": 610.36,
-      "6m": 588.32,
-      "1y": 551.2,
-      "2y": 519.29,
-      "3y": 440.09,
+      "6m": 585.07,
+      "1y": 551.8,
+      "2y": 516.41,
+      "3y": 437.07,
       "5y": 459.98
     },
-    "volatility1Y": 12.09,
-    "sharpeRatio": 1.02,
-    "jensenAlpha": 2.51,
-    "sortinoRatio": 1.55,
+    "volatility1Y": 12.07,
+    "sharpeRatio": 0.99,
+    "jensenAlpha": 2.1,
+    "sortinoRatio": 1.51,
     "beta": 0.83,
     "maxDrawdown": -19.53,
     "history": [
@@ -2627,9 +2682,9 @@ export const INITIAL_FUNDS: FundISIN[] = [
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-24",
-        "nav": 639.34,
-        "benchmarkNav": 607.37,
+        "date": "2026-09-25",
+        "nav": 637.78,
+        "benchmarkNav": 605.89,
         "riskFreeNav": 100
       }
     ],
@@ -2645,53 +2700,53 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "US_EQUITY",
     "categoryLabel": "Renta Variable EE.UU. (S&P 500 / Nasdaq / Sectores)",
     "isSafeHaven": false,
-    "currentNAV": 289.89,
+    "currentNAV": 285.86,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P000172KL.F",
     "sharesHeld": 0,
     "purchasePriceAvg": 0,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": -2.33,
-    "return3M": 0.96,
-    "return6M": -0.34,
-    "return12M": 20.62,
-    "return12Minus1M": 21.38,
-    "return3YAnnualized": 6.6,
-    "score12M": 0.20621645237798014,
-    "score12_1": 0.21378915514844188,
-    "scoreEquilibrado": 0.10400262852972564,
-    "scoreProgresivo": 0.013475121756244546,
-    "ytd": 0.16258271505915367,
-    "ret3yAnnual": 0.06595609176130734,
-    "ret5yAnnual": 0.04219488691019202,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": -4.23,
+    "return3M": -0.45,
+    "return6M": -2.07,
+    "return12M": 18.47,
+    "return12Minus1M": 22.06,
+    "return3YAnnualized": 6.18,
+    "score12M": 0.18466639038541244,
+    "score12_1": 0.22057741064856473,
+    "scoreEquilibrado": 0.08523403868869724,
+    "scoreProgresivo": -0.003921447200638466,
+    "ytd": 0.1464206938038901,
+    "ret3yAnnual": 0.06179258705509727,
+    "ret5yAnnual": 0.03928095580714808,
     "periodReturns": {
-      "1d": -0.0036089915446484433,
-      "1w": -0.020674977196716293,
-      "1m": -0.023347483323226226,
-      "3m": 0.009577209723479863,
-      "6m": -0.0034034653465346842,
-      "1y": 0.20621645237798014,
-      "2y": 0.18091086850252558,
-      "3y": 0.21120581599398336,
-      "5y": 0.22954574373329928
+      "1d": -0.013901824830107934,
+      "1w": -0.020154932474120812,
+      "1m": -0.04228088984186551,
+      "3m": -0.004457755798565111,
+      "6m": -0.02069201781431984,
+      "1y": 0.18466639038541244,
+      "2y": 0.17841536812597902,
+      "3y": 0.19706867671691786,
+      "5y": 0.2124528141833142
     },
     "periodPrices": {
-      "1d": 290.94,
-      "1w": 296.01,
-      "1m": 296.82,
+      "1d": 289.89,
+      "1w": 291.74,
+      "1m": 298.48,
       "3m": 287.14,
-      "6m": 290.88,
-      "1y": 240.33,
-      "2y": 245.48,
-      "3y": 239.34,
+      "6m": 291.9,
+      "1y": 241.3,
+      "2y": 242.58,
+      "3y": 238.8,
       "5y": 235.77
     },
-    "volatility1Y": 12.02,
-    "sharpeRatio": 1.41,
-    "jensenAlpha": 7.14,
-    "sortinoRatio": 2.14,
-    "beta": 0.83,
+    "volatility1Y": 12.11,
+    "sharpeRatio": 1.22,
+    "jensenAlpha": 4.86,
+    "sortinoRatio": 1.84,
+    "beta": 0.84,
     "maxDrawdown": -17.78,
     "history": [
       {
@@ -3073,9 +3128,9 @@ export const INITIAL_FUNDS: FundISIN[] = [
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-24",
-        "nav": 289.89,
-        "benchmarkNav": 275.4,
+        "date": "2026-09-25",
+        "nav": 285.86,
+        "benchmarkNav": 271.57,
         "riskFreeNav": 100
       }
     ],
@@ -3091,425 +3146,425 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "EURO_BONDS",
     "categoryLabel": "Renta Fija Soberana / Bonos Euro (Refugio)",
     "isSafeHaven": true,
-    "currentNAV": 196.8725,
+    "currentNAV": 196.7792,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P00000RNA.F",
     "sharesHeld": 0,
     "purchasePriceAvg": 0,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": -2.5,
-    "return3M": -4.19,
-    "return6M": -1.61,
-    "return12M": -2.44,
-    "return12Minus1M": 0.32,
-    "return3YAnnualized": 2.01,
-    "score12M": -0.024369877412221852,
-    "score12_1": 0.0031725639294484242,
-    "scoreEquilibrado": -0.0253797487511786,
-    "scoreProgresivo": -0.02822725105000369,
-    "ytd": -0.029269947492390536,
-    "ret3yAnnual": 0.02013135466432381,
-    "ret5yAnnual": -0.029074404879917193,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": -2.47,
+    "return3M": -4.23,
+    "return6M": -2.15,
+    "return12M": -2.39,
+    "return12Minus1M": 0.09,
+    "return3YAnnualized": 2.04,
+    "score12M": -0.023879289519333713,
+    "score12_1": 0.0009286958074741225,
+    "scoreEquilibrado": -0.026851825937623853,
+    "scoreProgresivo": -0.029261536115999888,
+    "ytd": -0.02972998692856854,
+    "ret3yAnnual": 0.020388345810940622,
+    "ret5yAnnual": -0.029084904302093206,
     "periodReturns": {
-      "1d": -0.0035566204665362644,
-      "1w": -0.008764770536514921,
-      "1m": -0.02503084036846992,
-      "3m": -0.041888322788090515,
-      "6m": -0.0160571516248319,
-      "1y": -0.024369877412221852,
-      "2y": -0.02386195113074785,
-      "3y": 0.061618036977940216,
-      "5y": -0.13716103420150827
+      "1d": -0.00047391077981939755,
+      "1w": -0.005454908432035999,
+      "1m": -0.024687723346824564,
+      "3m": -0.042342382240192156,
+      "6m": -0.021479015766395215,
+      "1y": -0.023879289519333713,
+      "2y": -0.020987315271426166,
+      "3y": 0.062420566489829854,
+      "5y": -0.1372076861524295
     },
     "periodPrices": {
-      "1d": 197.5752,
-      "1w": 198.6133,
-      "1m": 201.9269,
+      "1d": 196.8725,
+      "1w": 197.8585,
+      "1m": 201.7602,
       "3m": 205.4797,
-      "6m": 200.0853,
-      "1y": 201.7901,
-      "2y": 201.6851,
-      "3y": 185.4457,
-      "5y": 228.1683
+      "6m": 201.0986,
+      "1y": 201.5931,
+      "2y": 200.9976,
+      "3y": 185.2178,
+      "5y": 228.0725
     },
     "volatility1Y": 4.16,
-    "sharpeRatio": -1.46,
-    "jensenAlpha": -9.05,
-    "sortinoRatio": -2.03,
+    "sharpeRatio": -1.45,
+    "jensenAlpha": -9,
+    "sortinoRatio": -2.01,
     "beta": 0.25,
     "maxDrawdown": -20.67,
     "history": [
       {
-        "date": "2021-09-27",
-        "nav": 228.17,
-        "benchmarkNav": 216.76,
+        "date": "2021-09-29",
+        "nav": 228.07,
+        "benchmarkNav": 216.67,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-10-26",
-        "nav": 226.96,
-        "benchmarkNav": 215.61,
+        "date": "2021-10-28",
+        "nav": 227.4,
+        "benchmarkNav": 216.03,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-11-24",
-        "nav": 227.43,
-        "benchmarkNav": 216.06,
+        "date": "2021-11-26",
+        "nav": 229.39,
+        "benchmarkNav": 217.92,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-12-23",
-        "nav": 227.39,
-        "benchmarkNav": 216.02,
+        "date": "2021-12-29",
+        "nav": 226.4,
+        "benchmarkNav": 215.08,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-01-27",
-        "nav": 224.77,
-        "benchmarkNav": 213.53,
+        "date": "2022-01-31",
+        "nav": 223.78,
+        "benchmarkNav": 212.59,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-02-25",
-        "nav": 218.46,
-        "benchmarkNav": 207.54,
+        "date": "2022-03-01",
+        "nav": 223.29,
+        "benchmarkNav": 212.12,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-03-28",
-        "nav": 213.92,
-        "benchmarkNav": 203.22,
+        "date": "2022-03-30",
+        "nav": 212.61,
+        "benchmarkNav": 201.98,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-04-28",
-        "nav": 206.9,
-        "benchmarkNav": 196.56,
+        "date": "2022-05-02",
+        "nav": 205.84,
+        "benchmarkNav": 195.55,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-05-27",
-        "nav": 205.11,
-        "benchmarkNav": 194.85,
+        "date": "2022-05-31",
+        "nav": 202.67,
+        "benchmarkNav": 192.54,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-06-27",
-        "nav": 196.66,
-        "benchmarkNav": 186.83,
+        "date": "2022-06-29",
+        "nav": 197.33,
+        "benchmarkNav": 187.47,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-07-26",
-        "nav": 204.41,
-        "benchmarkNav": 194.19,
+        "date": "2022-07-28",
+        "nav": 206.41,
+        "benchmarkNav": 196.09,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-08-24",
-        "nav": 198.72,
-        "benchmarkNav": 188.78,
+        "date": "2022-08-26",
+        "nav": 198.33,
+        "benchmarkNav": 188.41,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-09-23",
-        "nav": 190.6,
-        "benchmarkNav": 181.07,
+        "date": "2022-09-27",
+        "nav": 187.71,
+        "benchmarkNav": 178.33,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-10-24",
-        "nav": 186.56,
-        "benchmarkNav": 177.23,
+        "date": "2022-10-26",
+        "nav": 189.32,
+        "benchmarkNav": 179.85,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-11-22",
-        "nav": 192.47,
-        "benchmarkNav": 182.85,
+        "date": "2022-11-24",
+        "nav": 194.83,
+        "benchmarkNav": 185.09,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-12-21",
-        "nav": 188.17,
-        "benchmarkNav": 178.76,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-01-24",
-        "nav": 191.21,
-        "benchmarkNav": 181.65,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-02-22",
-        "nav": 186.37,
-        "benchmarkNav": 177.05,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-03-23",
-        "nav": 190.58,
-        "benchmarkNav": 181.05,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-04-25",
-        "nav": 188.49,
-        "benchmarkNav": 179.07,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-05-25",
+        "date": "2022-12-23",
         "nav": 187.13,
         "benchmarkNav": 177.77,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-06-23",
-        "nav": 190.02,
-        "benchmarkNav": 180.52,
+        "date": "2023-01-26",
+        "nav": 190.33,
+        "benchmarkNav": 180.81,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-07-24",
-        "nav": 189.87,
-        "benchmarkNav": 180.37,
+        "date": "2023-02-24",
+        "nav": 186.13,
+        "benchmarkNav": 176.82,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-08-22",
-        "nav": 187.34,
-        "benchmarkNav": 177.97,
+        "date": "2023-03-27",
+        "nav": 190.53,
+        "benchmarkNav": 181,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-09-20",
-        "nav": 186.85,
-        "benchmarkNav": 177.51,
+        "date": "2023-04-27",
+        "nav": 187.58,
+        "benchmarkNav": 178.2,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-10-19",
-        "nav": 183.8,
-        "benchmarkNav": 174.61,
+        "date": "2023-05-29",
+        "nav": 187.92,
+        "benchmarkNav": 178.52,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-11-17",
-        "nav": 189.39,
-        "benchmarkNav": 179.92,
+        "date": "2023-06-27",
+        "nav": 189.9,
+        "benchmarkNav": 180.4,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-12-18",
-        "nav": 197,
-        "benchmarkNav": 187.15,
+        "date": "2023-07-26",
+        "nav": 189.03,
+        "benchmarkNav": 179.57,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-01-19",
-        "nav": 194.82,
-        "benchmarkNav": 185.07,
+        "date": "2023-08-24",
+        "nav": 188.98,
+        "benchmarkNav": 179.53,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-02-19",
-        "nav": 194.39,
-        "benchmarkNav": 184.67,
+        "date": "2023-09-22",
+        "nav": 186.11,
+        "benchmarkNav": 176.8,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-03-19",
-        "nav": 195.42,
-        "benchmarkNav": 185.64,
+        "date": "2023-10-23",
+        "nav": 184.62,
+        "benchmarkNav": 175.39,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-04-19",
-        "nav": 194.39,
-        "benchmarkNav": 184.67,
+        "date": "2023-11-21",
+        "nav": 189.85,
+        "benchmarkNav": 180.36,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-05-21",
-        "nav": 195.27,
-        "benchmarkNav": 185.5,
+        "date": "2023-12-20",
+        "nav": 198.67,
+        "benchmarkNav": 188.73,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-06-19",
-        "nav": 195.27,
-        "benchmarkNav": 185.5,
+        "date": "2024-01-23",
+        "nav": 194.57,
+        "benchmarkNav": 184.84,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-07-18",
-        "nav": 197.23,
-        "benchmarkNav": 187.36,
+        "date": "2024-02-21",
+        "nav": 194.11,
+        "benchmarkNav": 184.4,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-08-16",
-        "nav": 199.39,
-        "benchmarkNav": 189.42,
+        "date": "2024-03-21",
+        "nav": 195.79,
+        "benchmarkNav": 186,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-09-16",
-        "nav": 201.9,
-        "benchmarkNav": 191.8,
+        "date": "2024-04-23",
+        "nav": 194.79,
+        "benchmarkNav": 185.05,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-10-15",
-        "nav": 201.47,
-        "benchmarkNav": 191.39,
+        "date": "2024-05-23",
+        "nav": 194.09,
+        "benchmarkNav": 184.39,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-11-13",
-        "nav": 200.44,
-        "benchmarkNav": 190.42,
+        "date": "2024-06-21",
+        "nav": 195.22,
+        "benchmarkNav": 185.46,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-12-12",
+        "date": "2024-07-22",
+        "nav": 196.46,
+        "benchmarkNav": 186.64,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-08-20",
+        "nav": 199.98,
+        "benchmarkNav": 189.98,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-09-18",
+        "nav": 200.87,
+        "benchmarkNav": 190.82,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-10-17",
+        "nav": 201.82,
+        "benchmarkNav": 191.73,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-11-15",
+        "nav": 201.24,
+        "benchmarkNav": 191.18,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-12-16",
+        "nav": 202.98,
+        "benchmarkNav": 192.83,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-01-21",
+        "nav": 200.38,
+        "benchmarkNav": 190.36,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-02-19",
+        "nav": 200.75,
+        "benchmarkNav": 190.71,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-03-20",
+        "nav": 198.44,
+        "benchmarkNav": 188.52,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-04-22",
+        "nav": 202.81,
+        "benchmarkNav": 192.67,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-05-22",
+        "nav": 201.17,
+        "benchmarkNav": 191.11,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-06-20",
+        "nav": 203.12,
+        "benchmarkNav": 192.96,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-07-21",
+        "nav": 203.03,
+        "benchmarkNav": 192.88,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-08-19",
+        "nav": 201.68,
+        "benchmarkNav": 191.6,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-09-17",
+        "nav": 202.76,
+        "benchmarkNav": 192.62,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-10-16",
+        "nav": 204.68,
+        "benchmarkNav": 194.45,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-11-14",
+        "nav": 203.5,
+        "benchmarkNav": 193.33,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-12-15",
+        "nav": 202.51,
+        "benchmarkNav": 192.39,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-01-20",
+        "nav": 203.59,
+        "benchmarkNav": 193.41,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-02-18",
+        "nav": 205.86,
+        "benchmarkNav": 195.57,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-03-19",
+        "nav": 202.3,
+        "benchmarkNav": 192.18,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-04-21",
+        "nav": 202.75,
+        "benchmarkNav": 192.61,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-05-21",
+        "nav": 202.06,
+        "benchmarkNav": 191.96,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-06-19",
         "nav": 203.84,
         "benchmarkNav": 193.65,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-01-17",
-        "nav": 200.01,
-        "benchmarkNav": 190.01,
+        "date": "2026-07-20",
+        "nav": 202.16,
+        "benchmarkNav": 192.05,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-02-17",
-        "nav": 201.57,
-        "benchmarkNav": 191.49,
+        "date": "2026-08-18",
+        "nav": 201.21,
+        "benchmarkNav": 191.15,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-03-18",
-        "nav": 198.13,
-        "benchmarkNav": 188.22,
+        "date": "2026-09-17",
+        "nav": 198.61,
+        "benchmarkNav": 188.68,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-04-16",
-        "nav": 201.86,
-        "benchmarkNav": 191.77,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-05-20",
-        "nav": 201.77,
-        "benchmarkNav": 191.68,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-06-18",
-        "nav": 203.3,
-        "benchmarkNav": 193.13,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-07-17",
-        "nav": 202.1,
-        "benchmarkNav": 192,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-08-15",
-        "nav": 201.36,
-        "benchmarkNav": 191.29,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-09-15",
-        "nav": 202.48,
-        "benchmarkNav": 192.36,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-10-14",
-        "nav": 204.08,
-        "benchmarkNav": 193.88,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-11-12",
-        "nav": 204.41,
-        "benchmarkNav": 194.19,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-12-11",
-        "nav": 202.46,
-        "benchmarkNav": 192.33,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-01-16",
-        "nav": 203.77,
-        "benchmarkNav": 193.58,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-02-16",
-        "nav": 205.59,
-        "benchmarkNav": 195.31,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-03-17",
-        "nav": 203.19,
-        "benchmarkNav": 193.03,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-04-17",
-        "nav": 203.39,
-        "benchmarkNav": 193.22,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-05-19",
-        "nav": 200.92,
-        "benchmarkNav": 190.87,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-06-17",
-        "nav": 204.6,
-        "benchmarkNav": 194.37,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-07-16",
-        "nav": 202.2,
-        "benchmarkNav": 192.09,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-08-14",
-        "nav": 202.05,
-        "benchmarkNav": 191.95,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-09-15",
-        "nav": 197.84,
-        "benchmarkNav": 187.95,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-09-24",
-        "nav": 196.87,
-        "benchmarkNav": 187.03,
+        "date": "2026-09-25",
+        "nav": 196.78,
+        "benchmarkNav": 186.94,
         "riskFreeNav": 100
       }
     ],
@@ -3525,425 +3580,425 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "EURO_BONDS",
     "categoryLabel": "Renta Fija Soberana / Bonos Euro (Refugio)",
     "isSafeHaven": true,
-    "currentNAV": 97.0109,
+    "currentNAV": 97.0969,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P00012I69.F",
     "sharesHeld": 0,
     "purchasePriceAvg": 0,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": -2.35,
-    "return3M": -3.45,
-    "return6M": -1.76,
-    "return12M": -2.88,
-    "return12Minus1M": 0.16,
-    "return3YAnnualized": 1.99,
-    "score12M": -0.02878381354744397,
-    "score12_1": 0.0015657562158908345,
-    "scoreEquilibrado": -0.026568454479047474,
-    "scoreProgresivo": -0.026121820268961895,
-    "ytd": -0.032057255861382083,
-    "ret3yAnnual": 0.019934317657237965,
-    "ret5yAnnual": -0.02359752852659025,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": -2.17,
+    "return3M": -3.36,
+    "return6M": -2.06,
+    "return12M": -2.66,
+    "return12Minus1M": -0.02,
+    "return3YAnnualized": 2.06,
+    "score12M": -0.026617010185259304,
+    "score12_1": -0.0002185964095791082,
+    "scoreEquilibrado": -0.02621596209995717,
+    "scoreProgresivo": -0.025538695399317267,
+    "ytd": -0.03119917624356683,
+    "ret3yAnnual": 0.02061863445678025,
+    "ret5yAnnual": -0.023011751996671714,
     "periodReturns": {
-      "1d": -0.004380234755130719,
-      "1w": -0.01037459743603597,
-      "1m": -0.023451640114917627,
-      "3m": -0.034470506388200706,
-      "6m": -0.017608154758951167,
-      "1y": -0.02878381354744397,
-      "2y": -0.024023428854271778,
-      "3y": 0.06100300547284809,
-      "5y": -0.11254906732068404
+      "1d": 0.000886498321322593,
+      "1w": -0.006350960677463102,
+      "1m": -0.021673988392713173,
+      "3m": -0.03361456611292635,
+      "6m": -0.020615145949140823,
+      "1y": -0.026617010185259304,
+      "2y": -0.022190242939605365,
+      "3y": 0.0631400531915478,
+      "5y": -0.10988381366917421
     },
     "periodPrices": {
-      "1d": 97.4377,
-      "1w": 98.0279,
-      "1m": 99.3406,
+      "1d": 97.0109,
+      "1w": 97.7175,
+      "1m": 99.248,
       "3m": 100.4743,
-      "6m": 98.7497,
-      "1y": 99.886,
-      "2y": 99.3988,
-      "3y": 91.4332,
-      "5y": 109.3141
+      "6m": 99.1407,
+      "1y": 99.752,
+      "2y": 99.3004,
+      "3y": 91.3303,
+      "5y": 109.0834
     },
     "volatility1Y": 3.14,
-    "sharpeRatio": -2.08,
-    "jensenAlpha": -9.49,
-    "sortinoRatio": -2.73,
+    "sharpeRatio": -2.01,
+    "jensenAlpha": -9.27,
+    "sortinoRatio": -2.64,
     "beta": 0.25,
     "maxDrawdown": -18.14,
     "history": [
       {
-        "date": "2021-09-27",
-        "nav": 109.31,
-        "benchmarkNav": 103.85,
+        "date": "2021-09-29",
+        "nav": 109.08,
+        "benchmarkNav": 103.63,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-10-26",
-        "nav": 108.52,
-        "benchmarkNav": 103.09,
+        "date": "2021-10-28",
+        "nav": 108.78,
+        "benchmarkNav": 103.34,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-11-24",
-        "nav": 108.37,
-        "benchmarkNav": 102.95,
+        "date": "2021-11-26",
+        "nav": 109.15,
+        "benchmarkNav": 103.7,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-12-23",
-        "nav": 108.72,
-        "benchmarkNav": 103.28,
+        "date": "2021-12-29",
+        "nav": 108.46,
+        "benchmarkNav": 103.04,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-01-27",
-        "nav": 106.76,
-        "benchmarkNav": 101.43,
+        "date": "2022-01-31",
+        "nav": 106.57,
+        "benchmarkNav": 101.24,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-02-25",
-        "nav": 104.43,
-        "benchmarkNav": 99.2,
+        "date": "2022-03-01",
+        "nav": 105.82,
+        "benchmarkNav": 100.53,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-03-28",
-        "nav": 101.63,
-        "benchmarkNav": 96.55,
+        "date": "2022-03-30",
+        "nav": 101.93,
+        "benchmarkNav": 96.83,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-04-28",
-        "nav": 99.17,
-        "benchmarkNav": 94.21,
+        "date": "2022-05-02",
+        "nav": 98.4,
+        "benchmarkNav": 93.48,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-05-27",
-        "nav": 99.11,
-        "benchmarkNav": 94.16,
+        "date": "2022-05-31",
+        "nav": 98.46,
+        "benchmarkNav": 93.54,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-06-27",
-        "nav": 95.82,
-        "benchmarkNav": 91.03,
+        "date": "2022-06-29",
+        "nav": 96.14,
+        "benchmarkNav": 91.34,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-07-26",
-        "nav": 98.27,
-        "benchmarkNav": 93.35,
+        "date": "2022-07-28",
+        "nav": 99.01,
+        "benchmarkNav": 94.06,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-08-24",
-        "nav": 96.45,
-        "benchmarkNav": 91.62,
+        "date": "2022-08-26",
+        "nav": 96.64,
+        "benchmarkNav": 91.81,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-09-23",
-        "nav": 93,
-        "benchmarkNav": 88.35,
+        "date": "2022-09-27",
+        "nav": 91.47,
+        "benchmarkNav": 86.9,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-10-24",
-        "nav": 90.29,
-        "benchmarkNav": 85.77,
+        "date": "2022-10-26",
+        "nav": 91.41,
+        "benchmarkNav": 86.84,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-11-22",
-        "nav": 93.41,
-        "benchmarkNav": 88.74,
+        "date": "2022-11-24",
+        "nav": 93.97,
+        "benchmarkNav": 89.27,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-12-21",
-        "nav": 93.38,
-        "benchmarkNav": 88.71,
+        "date": "2022-12-23",
+        "nav": 93.02,
+        "benchmarkNav": 88.36,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-01-24",
-        "nav": 94.81,
-        "benchmarkNav": 90.07,
+        "date": "2023-01-26",
+        "nav": 94.67,
+        "benchmarkNav": 89.94,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-02-22",
-        "nav": 92.62,
-        "benchmarkNav": 87.98,
+        "date": "2023-02-24",
+        "nav": 92.46,
+        "benchmarkNav": 87.84,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-03-23",
-        "nav": 94.8,
-        "benchmarkNav": 90.06,
+        "date": "2023-03-27",
+        "nav": 94.38,
+        "benchmarkNav": 89.66,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-04-25",
-        "nav": 94.73,
-        "benchmarkNav": 90,
+        "date": "2023-04-27",
+        "nav": 94.2,
+        "benchmarkNav": 89.49,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-05-25",
-        "nav": 93.04,
-        "benchmarkNav": 88.39,
+        "date": "2023-05-29",
+        "nav": 93.17,
+        "benchmarkNav": 88.52,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-06-23",
-        "nav": 93.89,
-        "benchmarkNav": 89.2,
+        "date": "2023-06-27",
+        "nav": 93.87,
+        "benchmarkNav": 89.18,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-07-24",
-        "nav": 93.83,
-        "benchmarkNav": 89.14,
+        "date": "2023-07-26",
+        "nav": 93.8,
+        "benchmarkNav": 89.11,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-08-22",
-        "nav": 91.98,
-        "benchmarkNav": 87.38,
+        "date": "2023-08-24",
+        "nav": 92.59,
+        "benchmarkNav": 87.96,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-09-20",
-        "nav": 92.1,
-        "benchmarkNav": 87.49,
+        "date": "2023-09-22",
+        "nav": 91.86,
+        "benchmarkNav": 87.26,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-10-19",
-        "nav": 89.79,
-        "benchmarkNav": 85.3,
+        "date": "2023-10-23",
+        "nav": 90.21,
+        "benchmarkNav": 85.7,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-11-17",
-        "nav": 92.74,
-        "benchmarkNav": 88.11,
+        "date": "2023-11-21",
+        "nav": 92.98,
+        "benchmarkNav": 88.33,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-12-18",
-        "nav": 96.02,
-        "benchmarkNav": 91.22,
+        "date": "2023-12-20",
+        "nav": 96.58,
+        "benchmarkNav": 91.75,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-01-19",
-        "nav": 95.26,
-        "benchmarkNav": 90.49,
+        "date": "2024-01-23",
+        "nav": 95.27,
+        "benchmarkNav": 90.51,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-02-19",
-        "nav": 94.89,
-        "benchmarkNav": 90.15,
+        "date": "2024-02-21",
+        "nav": 94.84,
+        "benchmarkNav": 90.09,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-03-19",
-        "nav": 95.3,
-        "benchmarkNav": 90.53,
+        "date": "2024-03-21",
+        "nav": 95.49,
+        "benchmarkNav": 90.72,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-04-19",
-        "nav": 94.22,
-        "benchmarkNav": 89.51,
+        "date": "2024-04-23",
+        "nav": 94.34,
+        "benchmarkNav": 89.63,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-05-21",
-        "nav": 95.23,
-        "benchmarkNav": 90.47,
+        "date": "2024-05-23",
+        "nav": 94.82,
+        "benchmarkNav": 90.08,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-06-19",
-        "nav": 96.04,
-        "benchmarkNav": 91.23,
+        "date": "2024-06-21",
+        "nav": 95.91,
+        "benchmarkNav": 91.11,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-07-18",
-        "nav": 96.56,
-        "benchmarkNav": 91.74,
+        "date": "2024-07-22",
+        "nav": 96.29,
+        "benchmarkNav": 91.47,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-08-16",
-        "nav": 98.29,
-        "benchmarkNav": 93.37,
+        "date": "2024-08-20",
+        "nav": 98.41,
+        "benchmarkNav": 93.49,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-09-16",
-        "nav": 99.69,
-        "benchmarkNav": 94.71,
+        "date": "2024-09-18",
+        "nav": 99.31,
+        "benchmarkNav": 94.34,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-10-15",
-        "nav": 98.61,
-        "benchmarkNav": 93.68,
+        "date": "2024-10-17",
+        "nav": 98.36,
+        "benchmarkNav": 93.45,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-11-13",
-        "nav": 97.28,
-        "benchmarkNav": 92.41,
+        "date": "2024-11-15",
+        "nav": 97.33,
+        "benchmarkNav": 92.46,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-12-12",
-        "nav": 98.33,
-        "benchmarkNav": 93.41,
+        "date": "2024-12-16",
+        "nav": 98.05,
+        "benchmarkNav": 93.15,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-01-17",
-        "nav": 97.09,
-        "benchmarkNav": 92.24,
+        "date": "2025-01-21",
+        "nav": 97.35,
+        "benchmarkNav": 92.48,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-02-17",
-        "nav": 97.92,
-        "benchmarkNav": 93.02,
+        "date": "2025-02-19",
+        "nav": 97.63,
+        "benchmarkNav": 92.74,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-03-18",
-        "nav": 97.96,
-        "benchmarkNav": 93.06,
+        "date": "2025-03-20",
+        "nav": 98.18,
+        "benchmarkNav": 93.27,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-04-16",
-        "nav": 98.34,
-        "benchmarkNav": 93.43,
+        "date": "2025-04-22",
+        "nav": 98.21,
+        "benchmarkNav": 93.3,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-05-20",
-        "nav": 97.97,
-        "benchmarkNav": 93.07,
+        "date": "2025-05-22",
+        "nav": 97.64,
+        "benchmarkNav": 92.76,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-06-18",
+        "date": "2025-06-20",
         "nav": 98.75,
         "benchmarkNav": 93.81,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-07-17",
-        "nav": 98.51,
-        "benchmarkNav": 93.59,
+        "date": "2025-07-21",
+        "nav": 98.9,
+        "benchmarkNav": 93.95,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-08-15",
-        "nav": 99.1,
-        "benchmarkNav": 94.14,
+        "date": "2025-08-19",
+        "nav": 99.14,
+        "benchmarkNav": 94.19,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-09-15",
-        "nav": 100.24,
-        "benchmarkNav": 95.22,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-10-14",
-        "nav": 100.58,
-        "benchmarkNav": 95.56,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-11-12",
-        "nav": 100.56,
-        "benchmarkNav": 95.53,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-12-11",
-        "nav": 100.05,
-        "benchmarkNav": 95.05,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-01-16",
-        "nav": 100.25,
-        "benchmarkNav": 95.24,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-02-16",
-        "nav": 101.13,
-        "benchmarkNav": 96.07,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-03-17",
-        "nav": 100,
-        "benchmarkNav": 95,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-04-17",
+        "date": "2025-09-17",
         "nav": 100.22,
         "benchmarkNav": 95.21,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-05-19",
-        "nav": 98.7,
-        "benchmarkNav": 93.76,
+        "date": "2025-10-16",
+        "nav": 100.85,
+        "benchmarkNav": 95.81,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-06-17",
-        "nav": 99.99,
-        "benchmarkNav": 94.99,
+        "date": "2025-11-14",
+        "nav": 100.14,
+        "benchmarkNav": 95.13,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-07-16",
-        "nav": 99.44,
-        "benchmarkNav": 94.46,
+        "date": "2025-12-15",
+        "nav": 99.98,
+        "benchmarkNav": 94.98,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-08-14",
-        "nav": 99.11,
-        "benchmarkNav": 94.16,
+        "date": "2026-01-20",
+        "nav": 99.94,
+        "benchmarkNav": 94.94,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-15",
-        "nav": 97.58,
-        "benchmarkNav": 92.7,
+        "date": "2026-02-18",
+        "nav": 101.14,
+        "benchmarkNav": 96.08,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-24",
-        "nav": 97.01,
-        "benchmarkNav": 92.16,
+        "date": "2026-03-19",
+        "nav": 99.68,
+        "benchmarkNav": 94.69,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-04-21",
+        "nav": 99.95,
+        "benchmarkNav": 94.96,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-05-21",
+        "nav": 99.1,
+        "benchmarkNav": 94.14,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-06-19",
+        "nav": 99.95,
+        "benchmarkNav": 94.96,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-07-20",
+        "nav": 99.29,
+        "benchmarkNav": 94.32,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-08-18",
+        "nav": 98.88,
+        "benchmarkNav": 93.94,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-09-17",
+        "nav": 98.03,
+        "benchmarkNav": 93.13,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-09-25",
+        "nav": 97.1,
+        "benchmarkNav": 92.24,
         "riskFreeNav": 100
       }
     ],
@@ -3959,52 +4014,52 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "WORLD_EQUITY",
     "categoryLabel": "Renta Variable Global Desarrollada (MSCI World)",
     "isSafeHaven": false,
-    "currentNAV": 69.12,
+    "currentNAV": 69.67,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P0001A2G4.F",
     "sharesHeld": 0,
     "purchasePriceAvg": 0,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": -10.85,
-    "return3M": 20.21,
-    "return6M": 11.21,
-    "return12M": 31.06,
-    "return12Minus1M": 80.85,
-    "return3YAnnualized": 48.31,
-    "score12M": 0.31058020477815695,
-    "score12_1": 0.8084907860975041,
-    "scoreEquilibrado": 0.2293519023820828,
-    "scoreProgresivo": 0.07072405760959466,
-    "ytd": 0.03164179104477616,
-    "ret3yAnnual": 0.48305613891440524,
-    "ret5yAnnual": 0.18380934521768477,
+    "lastUpdated": "2026-09-25",
+    "lastDateFormatted": "25/09/26",
+    "return1M": -8.86,
+    "return3M": 21.17,
+    "return6M": 11.31,
+    "return12M": 33.75,
+    "return12Minus1M": 78.31,
+    "return3YAnnualized": 50.18,
+    "score12M": 0.33749280092148193,
+    "score12_1": 0.7830650804758572,
+    "scoreEquilibrado": 0.24501196865124228,
+    "scoreProgresivo": 0.08444187625436853,
+    "ytd": 0.03985074626865681,
+    "ret3yAnnual": 0.5017714356983574,
+    "ret5yAnnual": 0.1856873331450597,
     "periodReturns": {
-      "1d": -0.01059261379902654,
-      "1w": -0.01355787070072767,
-      "1m": -0.10847413904295111,
-      "3m": 0.20208695652173914,
-      "6m": 0.11214802896218834,
-      "1y": 0.31058020477815695,
-      "2y": 1.3875647668393785,
-      "3y": 2.2619159981123174,
-      "5y": 1.3249243188698285
+      "1d": 0.007957175925925819,
+      "1w": -0.018594168192703098,
+      "1m": -0.08856619570905278,
+      "3m": 0.21165217391304347,
+      "6m": 0.11311711135964209,
+      "1y": 0.33749280092148193,
+      "2y": 1.3958046767537828,
+      "3y": 2.386971317452601,
+      "5y": 1.3434241506895392
     },
     "periodPrices": {
-      "1d": 69.86,
-      "1w": 70.07,
-      "1m": 77.53,
+      "1d": 69.12,
+      "1w": 70.99,
+      "1m": 76.44,
       "3m": 57.5,
-      "6m": 62.15,
-      "1y": 52.74,
-      "2y": 28.95,
-      "3y": 21.19,
+      "6m": 62.59,
+      "1y": 52.09,
+      "2y": 29.08,
+      "3y": 20.57,
       "5y": 29.73
     },
-    "volatility1Y": 47.9,
-    "sharpeRatio": 0.57,
-    "jensenAlpha": 10.82,
-    "sortinoRatio": 0.8,
+    "volatility1Y": 47.91,
+    "sharpeRatio": 0.63,
+    "jensenAlpha": 13.51,
+    "sortinoRatio": 0.88,
     "beta": 1.4,
     "maxDrawdown": -47.52,
     "history": [
@@ -4381,9 +4436,9 @@ export const INITIAL_FUNDS: FundISIN[] = [
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-24",
-        "nav": 69.12,
-        "benchmarkNav": 65.66,
+        "date": "2026-09-25",
+        "nav": 69.67,
+        "benchmarkNav": 66.19,
         "riskFreeNav": 100
       }
     ],
@@ -4399,437 +4454,437 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "MONEY_MARKET_CASH",
     "categoryLabel": "Fondo Monetario Euro (€STR - Tasa Libre Riesgo)",
     "isSafeHaven": true,
-    "currentNAV": 44595.0586,
+    "currentNAV": 44606.7383,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P00000LRT.F",
     "sharesHeld": 0,
     "purchasePriceAvg": 0,
-    "lastUpdated": "2026-09-24",
-    "lastDateFormatted": "24/09/26",
-    "return1M": 0.19,
-    "return3M": 0.58,
-    "return6M": 1.13,
+    "lastUpdated": "2026-09-28",
+    "lastDateFormatted": "28/09/26",
+    "return1M": 0.2,
+    "return3M": 0.57,
+    "return6M": 1.12,
     "return12M": 2.18,
     "return12Minus1M": 2.16,
     "return3YAnnualized": 3.02,
-    "score12M": 0.02177088569749497,
-    "score12_1": 0.02163607927283273,
-    "scoreEquilibrado": 0.015414636964436967,
-    "scoreProgresivo": 0.006905091021036425,
-    "ytd": 0.016115405093395152,
-    "ret3yAnnual": 0.03018520575659589,
-    "ret5yAnnual": 0.02228910140312501,
+    "score12M": 0.021751257341851682,
+    "score12_1": 0.02158709221774302,
+    "scoreEquilibrado": 0.015380186074988256,
+    "scoreProgresivo": 0.006932871436806365,
+    "ytd": 0.016381531508954383,
+    "ret3yAnnual": 0.030156696054127297,
+    "ret5yAnnual": 0.022349983611959834,
     "periodReturns": {
-      "1d": 0.00008006684988792756,
-      "1w": 0.0005298729244145317,
-      "1m": 0.00186756450597092,
-      "3m": 0.005769083430633426,
-      "6m": 0.01125125809854266,
-      "1y": 0.02177088569749497,
-      "2y": 0.04987997576947523,
-      "3y": 0.09331656035849312,
-      "5y": 0.11652552015831152
+      "1d": 0,
+      "1w": 0.0004943198091598155,
+      "1m": 0.002001665457074475,
+      "3m": 0.0057242475024987804,
+      "6m": 0.011199026345208862,
+      "1y": 0.021751257341851682,
+      "2y": 0.0499042936729015,
+      "3y": 0.09322579240610751,
+      "5y": 0.11685803195430533
     },
     "periodPrices": {
-      "1d": 44591.4883,
-      "1w": 44571.4414,
-      "1m": 44511.9297,
-      "3m": 44339.2617,
-      "6m": 44098.8906,
-      "1y": 43644.8711,
-      "2y": 42476.3398,
-      "3y": 40788.7891,
-      "5y": 39940.9219
+      "1d": 44606.7383,
+      "1w": 44584.6992,
+      "1m": 44517.6289,
+      "3m": 44352.8516,
+      "6m": 44112.7188,
+      "1y": 43657.1406,
+      "2y": 42486.4805,
+      "3y": 40802.8594,
+      "5y": 39939.4883
     },
     "volatility1Y": 0.5,
     "sharpeRatio": -2.95,
     "jensenAlpha": -1.71,
     "sortinoRatio": -2.95,
     "beta": 0.02,
-    "maxDrawdown": -0.54,
+    "maxDrawdown": -0.53,
     "history": [
       {
-        "date": "2021-09-27",
-        "nav": 39940.92,
-        "benchmarkNav": 37943.88,
+        "date": "2021-09-29",
+        "nav": 39939.49,
+        "benchmarkNav": 37942.51,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-10-25",
-        "nav": 39924.71,
-        "benchmarkNav": 37928.48,
+        "date": "2021-10-27",
+        "nav": 39923.88,
+        "benchmarkNav": 37927.68,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-11-23",
-        "nav": 39909.22,
-        "benchmarkNav": 37913.76,
+        "date": "2021-11-25",
+        "nav": 39907.8,
+        "benchmarkNav": 37912.41,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-12-21",
-        "nav": 39892.82,
-        "benchmarkNav": 37898.18,
+        "date": "2021-12-23",
+        "nav": 39891.14,
+        "benchmarkNav": 37896.58,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-01-18",
-        "nav": 39874.44,
-        "benchmarkNav": 37880.72,
+        "date": "2022-01-20",
+        "nav": 39873.53,
+        "benchmarkNav": 37879.85,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-02-15",
-        "nav": 39849.54,
-        "benchmarkNav": 37857.06,
+        "date": "2022-02-17",
+        "nav": 39848.41,
+        "benchmarkNav": 37855.99,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-03-15",
-        "nav": 39825.24,
-        "benchmarkNav": 37833.98,
+        "date": "2022-03-17",
+        "nav": 39823.73,
+        "benchmarkNav": 37832.54,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-04-12",
-        "nav": 39814.27,
-        "benchmarkNav": 37823.56,
+        "date": "2022-04-19",
+        "nav": 39811.96,
+        "benchmarkNav": 37821.36,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-05-12",
-        "nav": 39793.34,
-        "benchmarkNav": 37803.67,
+        "date": "2022-05-17",
+        "nav": 39791.39,
+        "benchmarkNav": 37801.82,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-06-13",
-        "nav": 39772.11,
-        "benchmarkNav": 37783.5,
+        "date": "2022-06-15",
+        "nav": 39762.84,
+        "benchmarkNav": 37774.7,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-07-11",
-        "nav": 39750.75,
-        "benchmarkNav": 37763.21,
+        "date": "2022-07-14",
+        "nav": 39750.45,
+        "benchmarkNav": 37762.93,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-08-09",
-        "nav": 39745.29,
-        "benchmarkNav": 37758.02,
+        "date": "2022-08-11",
+        "nav": 39745.33,
+        "benchmarkNav": 37758.06,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-09-06",
-        "nav": 39744.97,
-        "benchmarkNav": 37757.72,
+        "date": "2022-09-08",
+        "nav": 39744.44,
+        "benchmarkNav": 37757.22,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-10-04",
-        "nav": 39744.67,
-        "benchmarkNav": 37757.44,
+        "date": "2022-10-06",
+        "nav": 39725.87,
+        "benchmarkNav": 37739.58,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-11-02",
-        "nav": 39767.96,
-        "benchmarkNav": 37779.56,
+        "date": "2022-11-07",
+        "nav": 39775.98,
+        "benchmarkNav": 37787.18,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-12-01",
-        "nav": 39819.85,
-        "benchmarkNav": 37828.86,
+        "date": "2022-12-06",
+        "nav": 39828.99,
+        "benchmarkNav": 37837.54,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-01-02",
-        "nav": 39878.94,
-        "benchmarkNav": 37884.99,
+        "date": "2023-01-04",
+        "nav": 39883.77,
+        "benchmarkNav": 37889.58,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-01-30",
-        "nav": 39947.81,
-        "benchmarkNav": 37950.42,
+        "date": "2023-02-01",
+        "nav": 39953.72,
+        "benchmarkNav": 37956.03,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-02-27",
-        "nav": 40020.84,
-        "benchmarkNav": 38019.8,
+        "date": "2023-03-01",
+        "nav": 40027.25,
+        "benchmarkNav": 38025.89,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-03-27",
-        "nav": 40078.89,
-        "benchmarkNav": 38074.95,
+        "date": "2023-03-29",
+        "nav": 40087.46,
+        "benchmarkNav": 38083.09,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-04-26",
-        "nav": 40183.07,
-        "benchmarkNav": 38173.92,
+        "date": "2023-05-02",
+        "nav": 40203.86,
+        "benchmarkNav": 38193.67,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-05-29",
-        "nav": 40301.93,
-        "benchmarkNav": 38286.83,
+        "date": "2023-05-31",
+        "nav": 40311.07,
+        "benchmarkNav": 38295.52,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-06-26",
-        "nav": 40404.16,
-        "benchmarkNav": 38383.95,
+        "date": "2023-06-28",
+        "nav": 40414.13,
+        "benchmarkNav": 38393.42,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-07-25",
-        "nav": 40522.5,
-        "benchmarkNav": 38496.38,
+        "date": "2023-07-27",
+        "nav": 40530.53,
+        "benchmarkNav": 38504,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-08-23",
-        "nav": 40645.45,
-        "benchmarkNav": 38613.18,
+        "date": "2023-08-28",
+        "nav": 40666.79,
+        "benchmarkNav": 38633.45,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-09-20",
-        "nav": 40767.99,
-        "benchmarkNav": 38729.59,
+        "date": "2023-09-25",
+        "nav": 40788.79,
+        "benchmarkNav": 38749.35,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-10-18",
-        "nav": 40896.57,
-        "benchmarkNav": 38851.74,
+        "date": "2023-10-23",
+        "nav": 40918.89,
+        "benchmarkNav": 38872.95,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-11-16",
-        "nav": 41028.56,
-        "benchmarkNav": 38977.13,
+        "date": "2023-11-21",
+        "nav": 41050.93,
+        "benchmarkNav": 38998.38,
         "riskFreeNav": 100
       },
       {
-        "date": "2023-12-14",
-        "nav": 41159.18,
-        "benchmarkNav": 39101.22,
+        "date": "2023-12-19",
+        "nav": 41186.52,
+        "benchmarkNav": 39127.19,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-01-17",
-        "nav": 41324.46,
-        "benchmarkNav": 39258.24,
+        "date": "2024-01-22",
+        "nav": 41351.71,
+        "benchmarkNav": 39284.13,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-02-14",
-        "nav": 41460.41,
-        "benchmarkNav": 39387.39,
+        "date": "2024-02-19",
+        "nav": 41482.68,
+        "benchmarkNav": 39408.55,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-03-13",
-        "nav": 41592.83,
-        "benchmarkNav": 39513.19,
+        "date": "2024-03-18",
+        "nav": 41616.78,
+        "benchmarkNav": 39535.94,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-04-15",
-        "nav": 41746.4,
-        "benchmarkNav": 39659.08,
+        "date": "2024-04-17",
+        "nav": 41756.95,
+        "benchmarkNav": 39669.1,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-05-20",
-        "nav": 41910.92,
-        "benchmarkNav": 39815.38,
+        "date": "2024-05-22",
+        "nav": 41921.44,
+        "benchmarkNav": 39825.37,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-06-17",
-        "nav": 42041.64,
-        "benchmarkNav": 39939.56,
+        "date": "2024-06-19",
+        "nav": 42051.22,
+        "benchmarkNav": 39948.66,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-07-15",
-        "nav": 42164.33,
-        "benchmarkNav": 40056.11,
+        "date": "2024-07-17",
+        "nav": 42173.34,
+        "benchmarkNav": 40064.67,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-08-12",
-        "nav": 42289.62,
-        "benchmarkNav": 40175.14,
+        "date": "2024-08-15",
+        "nav": 42300.69,
+        "benchmarkNav": 40185.66,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-09-10",
-        "nav": 42416.6,
-        "benchmarkNav": 40295.77,
+        "date": "2024-09-12",
+        "nav": 42425.39,
+        "benchmarkNav": 40304.12,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-10-08",
-        "nav": 42540.53,
-        "benchmarkNav": 40413.5,
+        "date": "2024-10-10",
+        "nav": 42548.6,
+        "benchmarkNav": 40421.17,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-11-06",
-        "nav": 42658.14,
-        "benchmarkNav": 40525.23,
+        "date": "2024-11-11",
+        "nav": 42675.62,
+        "benchmarkNav": 40541.84,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-12-04",
-        "nav": 42767.2,
-        "benchmarkNav": 40628.84,
+        "date": "2024-12-09",
+        "nav": 42786.78,
+        "benchmarkNav": 40647.44,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-01-09",
-        "nav": 42901.19,
-        "benchmarkNav": 40756.13,
+        "date": "2025-01-14",
+        "nav": 42918.63,
+        "benchmarkNav": 40772.7,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-02-06",
-        "nav": 43004.43,
-        "benchmarkNav": 40854.21,
+        "date": "2025-02-11",
+        "nav": 43020.2,
+        "benchmarkNav": 40869.19,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-03-06",
-        "nav": 43099.74,
-        "benchmarkNav": 40944.75,
+        "date": "2025-03-11",
+        "nav": 43114.14,
+        "benchmarkNav": 40958.43,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-04-03",
-        "nav": 43186.82,
-        "benchmarkNav": 41027.48,
+        "date": "2025-04-08",
+        "nav": 43199.92,
+        "benchmarkNav": 41039.93,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-05-12",
-        "nav": 43297.5,
-        "benchmarkNav": 41132.63,
+        "date": "2025-05-14",
+        "nav": 43303.9,
+        "benchmarkNav": 41138.7,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-06-10",
-        "nav": 43381.55,
-        "benchmarkNav": 41212.47,
+        "date": "2025-06-12",
+        "nav": 43386.94,
+        "benchmarkNav": 41217.59,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-07-08",
-        "nav": 43452.52,
-        "benchmarkNav": 41279.89,
+        "date": "2025-07-10",
+        "nav": 43457.36,
+        "benchmarkNav": 41284.49,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-08-05",
-        "nav": 43520.19,
-        "benchmarkNav": 41344.18,
+        "date": "2025-08-07",
+        "nav": 43525.26,
+        "benchmarkNav": 41349,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-09-03",
-        "nav": 43591.83,
-        "benchmarkNav": 41412.24,
+        "date": "2025-09-08",
+        "nav": 43604.44,
+        "benchmarkNav": 41424.22,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-10-01",
-        "nav": 43661.78,
-        "benchmarkNav": 41478.69,
+        "date": "2025-10-06",
+        "nav": 43675.14,
+        "benchmarkNav": 41491.38,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-10-29",
-        "nav": 43733.01,
-        "benchmarkNav": 41546.36,
+        "date": "2025-11-03",
+        "nav": 43745.35,
+        "benchmarkNav": 41558.08,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-11-27",
-        "nav": 43804.39,
-        "benchmarkNav": 41614.17,
+        "date": "2025-12-02",
+        "nav": 43817.07,
+        "benchmarkNav": 41626.22,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-12-30",
-        "nav": 43887.79,
-        "benchmarkNav": 41693.4,
+        "date": "2026-01-06",
+        "nav": 43905.49,
+        "benchmarkNav": 41710.21,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-01-29",
-        "nav": 43964.99,
-        "benchmarkNav": 41766.74,
+        "date": "2026-02-03",
+        "nav": 43977,
+        "benchmarkNav": 41778.15,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-02-26",
-        "nav": 44035.45,
-        "benchmarkNav": 41833.68,
+        "date": "2026-03-03",
+        "nav": 44047.56,
+        "benchmarkNav": 41845.18,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-03-26",
-        "nav": 44098.89,
-        "benchmarkNav": 41893.95,
+        "date": "2026-03-31",
+        "nav": 44110.88,
+        "benchmarkNav": 41905.33,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-04-28",
-        "nav": 44184.48,
-        "benchmarkNav": 41975.26,
+        "date": "2026-05-04",
+        "nav": 44199.5,
+        "benchmarkNav": 41989.53,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-06-01",
-        "nav": 44274.15,
-        "benchmarkNav": 42060.44,
+        "date": "2026-06-03",
+        "nav": 44279.45,
+        "benchmarkNav": 42065.48,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-06-29",
-        "nav": 44350.35,
-        "benchmarkNav": 42132.83,
+        "date": "2026-07-01",
+        "nav": 44355.49,
+        "benchmarkNav": 42137.71,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-07-28",
-        "nav": 44431.58,
-        "benchmarkNav": 42210,
+        "date": "2026-07-30",
+        "nav": 44438.17,
+        "benchmarkNav": 42216.26,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-08-25",
-        "nav": 44511.93,
-        "benchmarkNav": 42286.33,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-09-22",
-        "nav": 44587.81,
-        "benchmarkNav": 42358.42,
+        "date": "2026-08-27",
+        "nav": 44517.63,
+        "benchmarkNav": 42291.75,
         "riskFreeNav": 100
       },
       {
         "date": "2026-09-24",
         "nav": 44595.06,
         "benchmarkNav": 42365.31,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-09-28",
+        "nav": 44606.74,
+        "benchmarkNav": 42376.4,
         "riskFreeNav": 100
       }
     ],
@@ -4845,419 +4900,419 @@ export const INITIAL_FUNDS: FundISIN[] = [
     "category": "US_EQUITY",
     "categoryLabel": "Renta Variable EE.UU. (S&P 500 / Nasdaq / Sectores)",
     "isSafeHaven": false,
-    "currentNAV": 1.7685,
+    "currentNAV": 1.7598,
     "currency": "EUR",
     "yahooUrl": "https://finance.yahoo.com/quote/0P0001MRGW.F",
     "sharesHeld": 1000,
     "purchasePriceAvg": 1.5,
-    "lastUpdated": "2026-09-23",
-    "lastDateFormatted": "23/09/26",
-    "return1M": 7.39,
-    "return3M": 3.48,
-    "return6M": 31.84,
-    "return12M": 27.14,
-    "return12Minus1M": 22.1,
-    "return3YAnnualized": 23.66,
-    "score12M": 0.2713874910136591,
-    "score12_1": 0.22102765626158516,
-    "scoreEquilibrado": 0.2381764882252613,
-    "scoreProgresivo": 0.13082355067958165,
-    "ytd": 0.2279544507707263,
-    "ret3yAnnual": 0.23661218636585968,
-    "ret5yAnnual": 0.11042749451001321,
+    "lastUpdated": "2026-09-24",
+    "lastDateFormatted": "24/09/26",
+    "return1M": 6.38,
+    "return3M": 3.71,
+    "return6M": 31.19,
+    "return12M": 26.34,
+    "return12Minus1M": 22.66,
+    "return3YAnnualized": 23.46,
+    "score12M": 0.263407279776007,
+    "score12_1": 0.226588566767999,
+    "scoreEquilibrado": 0.23270326050013185,
+    "scoreProgresivo": 0.1253712060466275,
+    "ytd": 0.22191362310790175,
+    "ret3yAnnual": 0.23458104579287387,
+    "ret5yAnnual": 0.11571080709477854,
     "periodReturns": {
-      "1d": -0.00011307740148125411,
-      "1w": 0.054561717352414885,
-      "1m": 0.07390089871265482,
-      "3m": 0.03481568168519589,
-      "6m": 0.3183986879379752,
-      "1y": 0.2713874910136591,
-      "2y": 0.473872822735228,
-      "3y": 0.8910393498716851,
-      "5y": 0.688305489260143
+      "1d": -0.0049194232400339155,
+      "1w": 0.03853644142814994,
+      "1m": 0.06377319712265006,
+      "3m": 0.03712871287128716,
+      "6m": 0.31191292679290306,
+      "1y": 0.263407279776007,
+      "2y": 0.47214321566003004,
+      "3y": 0.8817365269461077,
+      "5y": 0.7288535219569703
     },
     "periodPrices": {
-      "1d": 1.7687,
-      "1w": 1.677,
-      "1m": 1.6468,
-      "3m": 1.709,
+      "1d": 1.7685,
+      "1w": 1.6945,
+      "1m": 1.6543,
+      "3m": 1.6968,
       "6m": 1.3414,
-      "1y": 1.391,
-      "2y": 1.1999,
+      "1y": 1.3929,
+      "2y": 1.1954,
       "3y": 0.9352,
-      "5y": 1.0475
+      "5y": 1.0179
     },
-    "volatility1Y": 17.04,
-    "sharpeRatio": 1.38,
-    "jensenAlpha": 9.51,
-    "sortinoRatio": 2.1,
+    "volatility1Y": 17.05,
+    "sharpeRatio": 1.33,
+    "jensenAlpha": 8.71,
+    "sortinoRatio": 2.03,
     "beta": 1.18,
     "maxDrawdown": -39.36,
     "history": [
       {
-        "date": "2021-09-27",
-        "nav": 1.05,
-        "benchmarkNav": 1,
+        "date": "2021-09-29",
+        "nav": 1.02,
+        "benchmarkNav": 0.97,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-10-26",
-        "nav": 1.07,
-        "benchmarkNav": 1.02,
+        "date": "2021-10-28",
+        "nav": 1.08,
+        "benchmarkNav": 1.03,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-11-24",
-        "nav": 1.13,
-        "benchmarkNav": 1.07,
+        "date": "2021-11-26",
+        "nav": 1.11,
+        "benchmarkNav": 1.06,
         "riskFreeNav": 100
       },
       {
-        "date": "2021-12-23",
-        "nav": 1.13,
-        "benchmarkNav": 1.07,
+        "date": "2021-12-28",
+        "nav": 1.14,
+        "benchmarkNav": 1.08,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-01-25",
+        "date": "2022-01-27",
+        "nav": 0.98,
+        "benchmarkNav": 0.93,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2022-02-25",
         "nav": 0.97,
         "benchmarkNav": 0.92,
         "riskFreeNav": 100
       },
       {
-        "date": "2022-02-23",
-        "nav": 0.93,
-        "benchmarkNav": 0.89,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-03-24",
-        "nav": 1,
-        "benchmarkNav": 0.95,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-04-26",
-        "nav": 0.9,
-        "benchmarkNav": 0.85,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-05-25",
-        "nav": 0.81,
-        "benchmarkNav": 0.77,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-06-23",
-        "nav": 0.8,
-        "benchmarkNav": 0.76,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-07-22",
-        "nav": 0.89,
-        "benchmarkNav": 0.84,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-08-22",
-        "nav": 0.94,
-        "benchmarkNav": 0.89,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-09-20",
-        "nav": 0.85,
-        "benchmarkNav": 0.8,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-10-19",
-        "nav": 0.79,
-        "benchmarkNav": 0.75,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-11-17",
-        "nav": 0.77,
-        "benchmarkNav": 0.73,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2022-12-16",
-        "nav": 0.73,
-        "benchmarkNav": 0.69,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-01-17",
-        "nav": 0.74,
-        "benchmarkNav": 0.7,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-02-15",
-        "nav": 0.81,
-        "benchmarkNav": 0.77,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-03-16",
-        "nav": 0.81,
-        "benchmarkNav": 0.77,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-04-18",
-        "nav": 0.82,
-        "benchmarkNav": 0.78,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-05-18",
-        "nav": 0.87,
-        "benchmarkNav": 0.83,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-06-16",
-        "nav": 0.94,
-        "benchmarkNav": 0.9,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-07-17",
-        "nav": 0.95,
-        "benchmarkNav": 0.9,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-08-15",
-        "nav": 0.94,
-        "benchmarkNav": 0.89,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-09-13",
-        "nav": 0.97,
-        "benchmarkNav": 0.92,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-10-12",
-        "nav": 0.97,
-        "benchmarkNav": 0.92,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-11-10",
-        "nav": 0.97,
-        "benchmarkNav": 0.92,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2023-12-11",
+        "date": "2022-03-28",
         "nav": 1.01,
         "benchmarkNav": 0.96,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-01-12",
-        "nav": 1.04,
-        "benchmarkNav": 0.98,
+        "date": "2022-04-28",
+        "nav": 0.92,
+        "benchmarkNav": 0.87,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-02-12",
+        "date": "2022-05-27",
+        "nav": 0.85,
+        "benchmarkNav": 0.81,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2022-06-27",
+        "nav": 0.82,
+        "benchmarkNav": 0.78,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2022-07-26",
+        "nav": 0.87,
+        "benchmarkNav": 0.83,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2022-08-24",
+        "nav": 0.93,
+        "benchmarkNav": 0.88,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2022-09-22",
+        "nav": 0.83,
+        "benchmarkNav": 0.79,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2022-10-21",
+        "nav": 0.78,
+        "benchmarkNav": 0.74,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2022-11-21",
+        "nav": 0.78,
+        "benchmarkNav": 0.74,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2022-12-20",
+        "nav": 0.72,
+        "benchmarkNav": 0.68,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-01-19",
+        "nav": 0.72,
+        "benchmarkNav": 0.68,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-02-17",
+        "nav": 0.79,
+        "benchmarkNav": 0.75,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-03-20",
+        "nav": 0.8,
+        "benchmarkNav": 0.76,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-04-20",
+        "nav": 0.81,
+        "benchmarkNav": 0.77,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-05-22",
+        "nav": 0.87,
+        "benchmarkNav": 0.83,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-06-20",
+        "nav": 0.94,
+        "benchmarkNav": 0.89,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-07-19",
+        "nav": 0.97,
+        "benchmarkNav": 0.92,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-08-17",
+        "nav": 0.92,
+        "benchmarkNav": 0.88,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-09-15",
+        "nav": 0.97,
+        "benchmarkNav": 0.92,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-10-16",
+        "nav": 0.97,
+        "benchmarkNav": 0.92,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-11-14",
+        "nav": 0.98,
+        "benchmarkNav": 0.93,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2023-12-13",
+        "nav": 1.02,
+        "benchmarkNav": 0.97,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-01-16",
+        "nav": 1.04,
+        "benchmarkNav": 0.99,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-02-14",
+        "nav": 1.11,
+        "benchmarkNav": 1.05,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-03-14",
+        "nav": 1.11,
+        "benchmarkNav": 1.06,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-04-16",
         "nav": 1.12,
         "benchmarkNav": 1.07,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-03-12",
-        "nav": 1.12,
-        "benchmarkNav": 1.06,
+        "date": "2024-05-16",
+        "nav": 1.15,
+        "benchmarkNav": 1.1,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-04-12",
-        "nav": 1.14,
-        "benchmarkNav": 1.09,
+        "date": "2024-06-14",
+        "nav": 1.23,
+        "benchmarkNav": 1.17,
         "riskFreeNav": 100
       },
       {
-        "date": "2024-05-14",
-        "nav": 1.14,
-        "benchmarkNav": 1.08,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-06-12",
-        "nav": 1.21,
-        "benchmarkNav": 1.15,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-07-11",
-        "nav": 1.26,
-        "benchmarkNav": 1.19,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-08-09",
-        "nav": 1.14,
-        "benchmarkNav": 1.08,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-09-09",
-        "nav": 1.13,
-        "benchmarkNav": 1.08,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-10-09",
-        "nav": 1.24,
-        "benchmarkNav": 1.18,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-11-08",
-        "nav": 1.32,
-        "benchmarkNav": 1.25,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2024-12-09",
-        "nav": 1.36,
-        "benchmarkNav": 1.29,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-01-16",
-        "nav": 1.37,
-        "benchmarkNav": 1.31,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-02-14",
-        "nav": 1.4,
-        "benchmarkNav": 1.33,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-03-17",
-        "nav": 1.21,
-        "benchmarkNav": 1.15,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-04-15",
-        "nav": 1.12,
-        "benchmarkNav": 1.06,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-05-20",
+        "date": "2024-07-15",
         "nav": 1.26,
         "benchmarkNav": 1.2,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-06-19",
-        "nav": 1.25,
-        "benchmarkNav": 1.19,
+        "date": "2024-08-13",
+        "nav": 1.15,
+        "benchmarkNav": 1.1,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-07-21",
-        "nav": 1.32,
+        "date": "2024-09-11",
+        "nav": 1.15,
+        "benchmarkNav": 1.09,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-10-11",
+        "nav": 1.24,
+        "benchmarkNav": 1.18,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2024-11-12",
+        "nav": 1.33,
         "benchmarkNav": 1.26,
         "riskFreeNav": 100
       },
       {
-        "date": "2025-08-19",
-        "nav": 1.34,
-        "benchmarkNav": 1.28,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-09-17",
-        "nav": 1.36,
-        "benchmarkNav": 1.3,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-10-17",
-        "nav": 1.41,
-        "benchmarkNav": 1.34,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-11-18",
-        "nav": 1.41,
-        "benchmarkNav": 1.34,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2025-12-17",
-        "nav": 1.4,
-        "benchmarkNav": 1.33,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-01-26",
-        "nav": 1.44,
-        "benchmarkNav": 1.37,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-02-24",
-        "nav": 1.41,
-        "benchmarkNav": 1.34,
-        "riskFreeNav": 100
-      },
-      {
-        "date": "2026-03-25",
+        "date": "2024-12-11",
         "nav": 1.39,
         "benchmarkNav": 1.32,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-04-27",
+        "date": "2025-01-20",
+        "nav": 1.38,
+        "benchmarkNav": 1.31,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-02-18",
+        "nav": 1.41,
+        "benchmarkNav": 1.34,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-03-19",
+        "nav": 1.21,
+        "benchmarkNav": 1.15,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-04-17",
+        "nav": 1.07,
+        "benchmarkNav": 1.02,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-05-22",
+        "nav": 1.25,
+        "benchmarkNav": 1.19,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-06-23",
+        "nav": 1.25,
+        "benchmarkNav": 1.19,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-07-23",
+        "nav": 1.31,
+        "benchmarkNav": 1.24,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-08-21",
+        "nav": 1.33,
+        "benchmarkNav": 1.26,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-09-19",
+        "nav": 1.39,
+        "benchmarkNav": 1.32,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-10-21",
+        "nav": 1.44,
+        "benchmarkNav": 1.37,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-11-20",
+        "nav": 1.42,
+        "benchmarkNav": 1.35,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2025-12-22",
+        "nav": 1.44,
+        "benchmarkNav": 1.37,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-01-28",
+        "nav": 1.45,
+        "benchmarkNav": 1.38,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-02-26",
+        "nav": 1.41,
+        "benchmarkNav": 1.34,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-03-27",
+        "nav": 1.34,
+        "benchmarkNav": 1.27,
+        "riskFreeNav": 100
+      },
+      {
+        "date": "2026-04-29",
         "nav": 1.54,
-        "benchmarkNav": 1.46,
+        "benchmarkNav": 1.47,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-05-27",
-        "nav": 1.7,
-        "benchmarkNav": 1.62,
+        "date": "2026-05-29",
+        "nav": 1.72,
+        "benchmarkNav": 1.64,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-06-25",
+        "date": "2026-06-29",
         "nav": 1.71,
-        "benchmarkNav": 1.62,
+        "benchmarkNav": 1.63,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-07-24",
-        "nav": 1.64,
-        "benchmarkNav": 1.56,
+        "date": "2026-07-28",
+        "nav": 1.62,
+        "benchmarkNav": 1.54,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-08-25",
-        "nav": 1.65,
-        "benchmarkNav": 1.57,
+        "date": "2026-08-27",
+        "nav": 1.68,
+        "benchmarkNav": 1.59,
         "riskFreeNav": 100
       },
       {
-        "date": "2026-09-23",
-        "nav": 1.77,
-        "benchmarkNav": 1.68,
+        "date": "2026-09-24",
+        "nav": 1.76,
+        "benchmarkNav": 1.67,
         "riskFreeNav": 100
       }
     ],

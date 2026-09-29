@@ -2,7 +2,7 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { FundISIN } from '../types';
 import { INITIAL_FUNDS } from '../data/defaultFunds';
 
-const STORAGE_KEY_FUNDS = 'antonacci_dual_momentum_clean_yahoo_v4';
+const STORAGE_KEY_FUNDS = 'antonacci_dual_momentum_clean_yahoo_v5';
 const STORAGE_KEY_CONFIG = 'antonacci_supabase_config_v1';
 const STORAGE_KEY_ACTIVE_FUND = 'antonacci_active_fund_id_v2';
 
@@ -15,6 +15,7 @@ const LEGACY_STORAGE_KEYS = [
   'antonacci_dual_momentum_funds_v5',
   'antonacci_dual_momentum_fixed_11_v1',
   'antonacci_dual_momentum_clean_yahoo_v3',
+  'antonacci_dual_momentum_clean_yahoo_v4',
   'antonacci_active_fund_id_v1',
 ];
 
@@ -302,6 +303,14 @@ export const KNOWN_AUDITED_METRICS: Record<string, Partial<FundISIN>> = {
 // Local storage fallback handlers
 export function getLocalFunds(): FundISIN[] {
   try {
+    let previousHoldings: any[] | null = null;
+    const legacyV4 = localStorage.getItem('antonacci_dual_momentum_clean_yahoo_v4');
+    if (legacyV4) {
+      try {
+        previousHoldings = JSON.parse(legacyV4);
+      } catch {}
+    }
+
     // Clean up older legacy storage keys to avoid lingering stale cached metrics
     for (const legacyKey of LEGACY_STORAGE_KEYS) {
       if (localStorage.getItem(legacyKey)) {
@@ -309,7 +318,11 @@ export function getLocalFunds(): FundISIN[] {
       }
     }
 
-    const data = localStorage.getItem(STORAGE_KEY_FUNDS);
+    let data = localStorage.getItem(STORAGE_KEY_FUNDS);
+    if (!data && previousHoldings) {
+      data = JSON.stringify(previousHoldings);
+    }
+
     if (data !== null) {
       const parsed = JSON.parse(data);
       if (Array.isArray(parsed) && parsed.length === INITIAL_FUNDS.length) {
